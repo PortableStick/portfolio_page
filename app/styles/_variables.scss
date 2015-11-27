@@ -1,0 +1,101 @@
+/* Mixins
+================================ */
+
+@mixin fonts($fontStack, $fontWeight: 400){
+    font-family: $fontStack;
+    font-weight: $fontWeight;
+}
+
+/* Font delcarations
+================================ */
+@import url(https://fonts.googleapis.com/css?family=Merriweather|Josefin+Slab:700,600|Comfortaa);
+
+$Merriweather               : 'Merriweather', serif;
+$Josefin                    : 'Josefin Slab', serif;
+$Comfortaa                  : 'Comfortaa', sans-serif;
+
+/* Font assignments     
+================================ */
+
+$navbarFont                 : $Josefin;
+$navbarFontWeight           : 600;
+$titleFont                  : $Comfortaa;
+
+/* Color declarations
+================================ */
+$fontWhite                  : #eee;
+$fontBlack                  : #444;
+$lightGreen                 : #EAF9C1;
+$oliveGreen                 : #a2ad86;
+$lightGrey                  : #ddd;
+
+$deepBlue                   : #332CFF;
+$deepGreen                  : #37850D;
+$deepOrange                 : #C34714;
+$darkOrange                 : #452513;
+$sandyOrange                : #522C17;
+$transparentBlack           : rgba(25, 25, 25, 0.8);
+$darkUrple                  : #332327;
+$lightUrple                 : rgba(69,47,53,0.9);
+
+$lightPink                  : rgba(218, 178, 143, 0.38);
+
+$darkGrey                   : #5d5d5d;
+$dullGreen                  : #909a54;
+
+/*Gradient*/
+
+$mainGrad                   : linear-gradient(to right, $lightUrple 0%,$darkUrple 100%);
+$landingRadialGrad          : radial-gradient(circle at 0 0,transparentize($lightUrple, 0.5) 10%, transparent 100%);
+
+/* Color assignments
+================================ */
+
+/*Text*/
+
+$titleFontColor             : $fontWhite;
+$titleLinks                 : $fontWhite;
+$navLinks                   : $fontWhite;
+$navHoverColor              : $lightGreen;
+$brandColor                 : $fontWhite;
+$brandHoverColor            : darken($brandColor, 10%);
+$CopyrightColor             : $fontWhite;
+$footerLinks                : $fontWhite;
+$footerLinkHover            : $lightGreen;
+$aboutFontColor             : $fontBlack;
+$formText                   : $fontWhite;
+$formButtonText             : $fontWhite;
+$activeLinkHover            : $navHoverColor;
+$carouselFont               : $darkGrey;
+$contactHeading             : $fontBlack;
+$formButtonTextHover        : $formButtonText;
+
+$linkedinColor              : $deepBlue;
+$githubColor                : $deepGreen;
+$fireColor                  : $deepOrange;
+
+$textShadow                 : $transparentBlack;
+/*Borders*/
+
+$activeBorderBottom         : $oliveGreen;
+$navToggleBorder            : $fontWhite;
+$navToggleInnerBars         : $fontWhite;
+$carouselIndicatorBorder    : $darkGrey;
+
+$formBoxShadow              : transparentize($fontBlack, .3);
+
+/*Backgrounds*/
+
+$footerBG                   : $darkOrange;
+$formButtonBG               : $dullGreen;
+$formLabelBG                : $dullGreen;
+$navToggleHoverBG           : lighten($transparentBlack, 10%);
+$collapsingMenuBG           : $transparentBlack;
+$fullNavBG                  : $darkOrange;
+$carouselBG                 : $lightGrey;
+$carouselIndicatorBG        : $darkGrey;
+$carouselActiveBG           : $fontWhite;
+$formButtonHoverBG          : lighten($formButtonBG, 10%);
+$aboutImageWrapper          : $fontWhite;
+$faBG                       : $transparentBlack;
+
