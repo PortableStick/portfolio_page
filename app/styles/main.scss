@@ -161,7 +161,7 @@ nav.inbody {
     padding: 0 5px;
     text-align: center; 
     span.refs-text {
-      @include fonts($Comfortaa); 
+      @include fonts($referenceLinkFont); 
     }
   }
 }
@@ -172,7 +172,7 @@ nav.inbody {
 #about #bio p {
   font-size: 1.6em;
   line-height: 150%;
-  @include fonts($Merriweather); 
+  @include fonts($bioFont); 
   color: $aboutFontColor;
 }
 
@@ -248,7 +248,7 @@ div.expressjs > a:hover {
   font-size: 3.5em;
   text-align: center;
   color: $contactHeading; 
-  @include fonts($Josefin, 700);
+  @include fonts($ContactHeadingFont, $ContactHeadingFontWeight);
 }
 
 form {
@@ -288,7 +288,7 @@ form label {
   height: 150px; }
 
 form label, .btn-lg {
-   @include fonts($Josefin, 700);  
+   @include fonts($formFont, $formFontWeight);  
  }
 
 /* Footer
@@ -358,7 +358,7 @@ Media queries
     left: 15%;
     font-size: 92px; }
   #about #bio p {
-    font-size: 2em; } }
+    font-size: 1.6em; } }
 
 @media (min-width: 992px) {
   #refs a .fa{
