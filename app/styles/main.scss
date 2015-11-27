@@ -2,92 +2,415 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+@import "_variables.scss";
 
-/* Space out content a bit */
+
+* {
+  box-sizing: border-box; }
+
+a:hover, a:visited, a:focus {
+  text-decoration: none; }
+
+.container-fluid {
+  padding: 0; }
+
+.tmpclear {
+  clear: none; }
+
+/* For scrollspy
+================================ */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+  position: relative; }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+/* Set margin for all sections except landing
+================================ */
+#about, #contact, #portfolio {
+  padding-top: 50px; }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+/* Make sure pages clear each other
+================================ */
+.page {
+  clear: both; }
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+/* Navigation
+================================ */
+nav.navbar {
+  h1 {
+    font-size: 2em;
+    @include fonts($navbarFont, $navbarFontWeight);
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+nav ul {
+  margin: 0;
+  padding: 0 5%; }
+
+nav.navbar-nav {
+  bottom: 0; }
+
+nav.navbar-default {
+  padding: 0;
+  background-color: transparent;
+  border-bottom: none; }
+
+nav h1.navbar-brand {
+  margin: 0 0 10px 0; }
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:visited {
+  color: $navLinks;
+  @include fonts($navbarFont, $navbarFontWeight);
+  font-variant: bold;
+  font-size: 1.8em; 
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.navbar-default .navbar-nav > li > a:hover {
+  color: $navHoverColor; }
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: transparent;
+  border-bottom: 2px solid $activeBorderBottom;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: $activeLinkHover; 
+}
+
+.navbar-default .navbar-brand {
+  color: $brandColor; }
+
+.navbar-default .navbar-brand:hover {
+  color: $brandHoverColor;
+  cursor: default; }
+
+nav div.collapse.in, nav div.collapsing {
+  background-color: $collapsingMenuBG;
+  border: none; }
+
+.navbar-default .navbar-toggle {
+  border-color: $navToggleBorder; 
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $navToggleInnerBars; }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: $navToggleHoverBG; 
+}
+
+nav.inbody {
+  background-color: $fullNavBG;
+  background: $mainGrad; 
+}
+
+
+
+/* Page -- landing
+================================ */
+#landing {
+  background-image: $landingRadialGrad, url("https://dl.dropboxusercontent.com/u/4223104/images/landingbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 0; 
+
+  h1.title {
+    @include fonts($titleFont);
+    font-size: 38px;
+    color: $titleFontColor;
+    top: 35%;
+    left: 40px;
+    position: absolute; 
+  }
+}
+
+.fa-linkedin{
+  color: $linkedinColor;
+}
+
+.fa-github{
+  color: $githubColor;
+}
+
+.fa-fire{
+  color: $fireColor;
+}
+
+#refs {
+  position: relative;
+  top: 65%; 
+  i{
+    background-color: $faBG;
+    border-radius: 5px;
+    padding: 13px;
+  }
+  
+  .fa{
+    text-shadow: 3px 3px 3px $textShadow;
+    font-size: 4em;
+  }
+
+  a {
+    color: $titleLinks;
+    max-width: 25%;
+    padding: 0 5px;
+    text-align: center; 
+    span.refs-text {
+      @include fonts($Comfortaa); 
+    }
+  }
+}
+
+
+/* Page -- about
+================================ */
+#about #bio p {
+  font-size: 1.6em;
+  line-height: 150%;
+  @include fonts($Merriweather); 
+  color: $aboutFontColor;
+}
+
+img#portpic {
+  width: 100%;
+  padding: 10px 10px 20px;
+  border-radius: 5% 5% 0 0; }
+
+#about .image-wrap {
+  padding-bottom: 10px;
+  background-color: $aboutImageWrapper;
+  width: 70%;
+  height: auto;
+  margin: 5px auto 20px; }
+
+a img {
+  max-width: 80%;
+  max-height: 100px; }
+
+div.web-wrapper {
+  background-color: $aboutImageWrapper;
+  clear: left; }
+
+div.web-wrapper .row {
+  padding: 10px; }
+
+div.web {
+  text-align: center; }
+
+div.expressjs {
+  font-size: 5.5em; }
+
+div.expressjs > a {
+  text-decoration: none; }
+
+div.expressjs > a:hover {
+  color: steelblue; }
+
+/* Page - Portfolio
+================================ */
+#portfolio {
+  height: 100vh; }
+
+#portfolio .carousel, #portfolio .carousel .carousel-inner, #portfolio .carousel .carousel-inner .item, #portfolio .carousel .carousel-inner .item .empty {
+  height: 100%; }
+
+.empty h3 {
+  font-size: 6em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: $carouselFont;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.empty {
+  background-color: $carouselBG;
+  height: 50vh;
+  text-align: center; }
+
+.carousel-indicators li {
+  background-color: $carouselIndicatorBG;
+  border-color: $carouselIndicatorBorder; 
+}
+
+.carousel-indicators li.active {
+  background-color: $carouselActiveBG; }
+
+/* Page - Contact
+================================ */
+#contact h2 {
+  font-size: 3.5em;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+  color: $contactHeading; 
+  @include fonts($Josefin, 700);
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
+form {
+  padding-top: 20px;
+  margin-bottom: 20px; }
+
+form label {
+  font-size: 1.6em;
+  text-align: center;
+  background-color: $formLabelBG;
+  color: $formText;
+  padding: 10px 0; 
+  box-shadow: -4px 4px 7px 1px $formBoxShadow;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.form-group {
+  margin-bottom: 10px; }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.form-group-lg .form-control {
+  font-size: 1.6em; }
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.btn-lg {
+  padding: 16px 20px;
+  background-color: $formButtonBG;
+  color: $formButtonText;
+  font-size: 1.6em; 
+  text-transform: uppercase;
+  box-shadow: 0px 6px 7px -3px $formBoxShadow;
 }
+
+.btn-lg:hover{
+  background-color: $formButtonHoverBG;
+  color: $formButtonTextHover;
+}
+
+.form-group-lg textarea.form-control {
+  height: 150px; }
+
+form label, .btn-lg {
+   @include fonts($Josefin, 700);  
+ }
+
+/* Footer
+================================ */
+footer {
+  background-color: $footerBG;
+  background: $mainGrad;
+  color: $CopyrightColor;
+  margin: 0;
+  padding:7px 0;
+  clear: both; 
+}
+  
+footer a, footer a:focus {
+  font-size: 1.3em;
+  color: $footerLinks;
+  padding: 0 10px; }
+
+footer a:hover {
+  color: $footerLinkHover; }
+
+footer h5 {
+  font-size: 1.4em;
+  margin: 0;
+  padding-top: 2px;
+  padding-right: 10px; }
+
+.social-links {
+  float: left; }
+
+.copyright {
+  cursor: default;
+  user-select:none;
+  float: right; }
+
+.clearme {
+  clear: both; }
+
+/**************************
+Media queries
+**************************/
+/* Prevent collapse at less than 890px
+================================ */
+@media (max-width: 890px) {
+  #landing {
+    height: 50vh; }
+  #contact {
+    padding-bottom: 20px; } }
+
+/* Make all pages 100% vh at desktop sizes
+================================ */
+@media (min-width: 890px) {
+  #landing, #about, #portfolio {
+    height: 100vh; }
+  #contact {
+    height: 90vh; } }
+
+/* font sizing
+================================ */
+@media (min-width: 500px) {
+  #landing h1.title {
+    font-size: 45px; } }
+
+@media (min-width: 900px) {
+  #landing h1.title {
+    top: 35%;
+    left: 15%;
+    font-size: 92px; }
+  #about #bio p {
+    font-size: 2em; } }
+
+@media (min-width: 992px) {
+  #refs a .fa{
+    font-size: 4rem; }
+  #refs a span.refs-text {
+    font-size: 2rem; } 
+
+  }
+
+@media (min-width: 1200px) {
+  div.expressjs {
+    font-size: 4em; } 
+  #refs a .fa{
+    font-size: 4.8rem; }
+  #refs a span.refs-text {
+    font-size: 2.5rem; }
+  }
+
+@media (min-width: 1600px) {
+  #refs a .fa{
+    font-size: 5.8rem; }
+  #refs a span.refs-text {
+    font-size: 3.5rem; }
+  }
+
+@media (min-width: 900px) {
+  /*form*/
+  form label {
+    text-align: right;
+    font-size: 3em; }
+  form .btn-lg {
+    font-size: 2.5em; }
+  .form-group-lg .form-control {
+    margin-top: 10px;
+    height: 6rem; }
+  .form-group-lg textarea.form-control {
+    height: 400px; } }
+
+/* Image sizing
+================================ */
+@media (min-width: 768px) {
+  #about .image-wrap {
+    width: 40%;
+    float: left;
+    margin-right: 20px; } }
+
+/* Center bio stuff @890px
+================================ */
+@media (min-width: 890px) {
+  #about .wrapper {
+    margin-top: 12%; }
+  .tmpclear {
+    clear: both; } }
+
+/*# sourceMappingURL=application.css.map */

@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="Personal Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>homepage</title>
 
@@ -20,54 +20,173 @@
     
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+    <header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="main-nav">
+      <h1 class="navbar-brand">Greg Smith</h1>
+      <div class="navbar-header">
+        
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      </div><!--navbar-header-->
+      <div class="collapse navbar-collapse" id="collapse">  
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#landing">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a>
         </ul>
-        <h3 class="text-muted">homepage</h3>
       </div>
-
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+    </nav>
+  </header>
+  <div class="container-fluid page" id="main">
+    <div id="landing">
+        <h1 class="title">Web Developer</h1>
+        <div id="refs" class="row"> 
+          <a href="https://www.linkedin.com/pub/gregory-smith/74/857/b62" class="col-xs-3 col-xs-offset-1" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;<span class="refs-text hidden-xs hidden-sm">LinkedIn</span></a>
+          <a href="https://github.com/PortableStick" class="col-xs-3" target="_blank"><i class="fa fa-github"></i>&nbsp;<span class="refs-text hidden-xs hidden-sm">Github</span></a>
+          <a href="http://freecodecamp.com/portablestick" class="col-xs-3" target="_blank"><i class="fa fa-fire"></i>&nbsp;<span class="refs-text hidden-xs hidden-sm">FreeCodeCamp</span></a>
         </div>
-      </div>
+    </div><!--main & container-fluid-->
+    <div class="container page" id="about">
+      <div class="wrapper">
+        <div class="image-wrap">
+          <img src="https://dl.dropboxusercontent.com/u/4223104/images/portpic.jpg" id="portpic">
+        </div>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
-      </div>
+        <div id="bio">
+          <p>Probably as a result of extraterrestrial
+            tampering of human DNA, this
+            guy is entirely too excited about 
+            the clickity-clack sound of his 
+            keyboard as he learns, uses, and builds
+            web-based solutions to the world’s
+            meat-based problems.</p>
+
+            <p>Thoroughly <a href="http://freecodecamp.com/portablestick" target='_blank'>self-taught</a> and motivated 
+            by forces outside the domain of rational thought,
+            he is ready to help shape the next
+            generation of the web.</p>
+        </div><!--bio-->
+        <div class="tmpclear"></div>
+      </div><!--wrapper-->
+      <div class="web-wrapper">
+        <div class="row">
+          <div class="web mongo col-xs-12 col-lg-3 img-responsive"><a href="https://www.mongodb.org/" target="_blank"><img src="https://dl.dropboxusercontent.com/u/4223104/images/MongoDB-Logo-CMYK.png"></a></div><!--mongo-->
+          <div class="web expressjs col-xs-12 col-lg-3"><a href="http://expressjs.com/" target="_blank"><span class="express">Express</span><span class="js">JS</span></a></div><!--express-->
+          <div class="web angular col-xs-12 col-lg-3 img-responsive"><a href="https://angularjs.org/" target="_blank"><img src="https://dl.dropboxusercontent.com/u/4223104/images/AngularJS-Shield-medium.png"></a></div><!--angular-->
+          <div class="web node col-xs-12 col-lg-3 img-responsive"><a href="https://nodejs.org/" target="_blank"><img src="https://dl.dropboxusercontent.com/u/4223104/images/nodejs-clean.png"></a></div><!--node-->
+        </div><!--row-->
+      </div><!--web-wrapper-->
+    </div><!--about & container-->
+
+      
+
+    <div id="portfolio" class="container-fluid page">
+        
+
+        <div class="carousel slide" id="carousel">
+
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carousel"></li>
+            <li data-slide-to="1" data-target="#carousel"></li>
+            <li data-slide-to="2" data-target="#carousel"></li>
+            <li data-slide-to="3" data-target="#carousel"></li>
+            <li data-slide-to="4" data-target="#carousel"></li>
+            <li data-slide-to="5" data-target="#carousel"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            
+            <div class="item active">
+              <div class="empty">
+                <h3>Coming Soon!</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="empty">
+                <h3>Coming Soon!</h3>
+              </div>  
+            </div>
+            <div class="item">
+              <div class="empty">
+                <h3>Coming Soon!</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="empty">
+                <h3>Coming Soon!</h3>
+              </div>  
+            </div>
+            <div class="item">
+              <div class="empty">
+                <h3>Coming Soon!</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="empty">
+                <h3>Coming Soon!</h3>
+              </div>
+            </div>
+          </div><!--carousel-inner-->
+
+          <!--Controls-->
+          <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><!--carousel-->
     </div>
+    <div id="contact" class="page">
+      
+        <h2>Transmit your thoughts</h2>
+        <form class="form-horizontal">
+          <div class="form-group form-group-lg">
+            <label for="name" class="col-xs-3">Name:</label>
+            <div class="col-xs-9">
+              <input type="text" name="name" placeholder="Your name" id="name" class="form-control">
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="email" class="col-xs-3">Email:</label>
+            <div class="col-xs-9">
+              <input type="email" name="email" placeholder="your@email.com" id="email" class="form-control">
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="message" class="col-xs-3">Message:</label>
+            <div class="col-xs-9">
+              <textarea name="message" placeholder="Hello, handsome!" id="message" class="form-control"></textarea>
+            </div>
+          </div>
+            <div class="form-group">
+              <div class="col-xs-offset-3 col-xs-9">
+                <button class="btn btn-default btn-lg">Send</button>
+              </div>
+            </div>
+        </form>
     
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+    </div><!--contact-->
 
+    <footer>  
+      <div class="social-links">
+        <a href="https://www.linkedin.com/pub/gregory-smith/74/857/b62" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;<span class="hidden-xs">LinkedIn</span></a>
+        <a href="https://github.com/PortableStick" target="_blank"><i class="fa fa-github"></i>&nbsp;<span class="hidden-xs">Github</span></a>
+        <a href="http://freecodecamp.com/portablestick" target="_blank"><i class="fa fa-fire"></i>&nbsp;<span class="hidden-xs">FreeCodeCamp</span></a>
+      </div>
+      <div class="copyright">
+        <h5>&copy; 2015 Gregory Smith</h5>
+      </div>
+      <div class="clearme"></div>
+    </footer>
+  </div><!--main-->
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
