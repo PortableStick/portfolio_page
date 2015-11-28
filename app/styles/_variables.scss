@@ -26,6 +26,9 @@ $ContactHeadingFont         : $Comfortaa;
 $ContactHeadingFontWeight   : 700;
 $formFont                   : $Josefin;
 $formFontWeight             : 700;
+$descriptionHeadingFont     : $Josefin;
+$descriptionHeadingFontWt   : 700;
+$descriptionTextFont        : $Merriweather;
 
 /* Color declarations
 ================================ */
@@ -34,6 +37,7 @@ $fontBlack                  : #444;
 $lightGreen                 : #EAF9C1;
 $oliveGreen                 : #a2ad86;
 $lightGrey                  : #ddd;
+$darkGreen                  : #2F4525;
 
 $deepBlue                   : #332CFF;
 $deepGreen                  : #37850D;
@@ -79,6 +83,7 @@ $formButtonTextHover        : $formButtonText;
 $linkedinColor              : $deepBlue;
 $githubColor                : $deepGreen;
 $fireColor                  : $deepOrange;
+$descriptionColor           : $fontWhite;
 
 $textShadow                 : $transparentBlack;
 /*Borders*/
@@ -93,8 +98,8 @@ $formBoxShadow              : transparentize($fontBlack, .3);
 /*Backgrounds*/
 
 $footerBG                   : $darkOrange;
-$formButtonBG               : $dullGreen;
-$formLabelBG                : $dullGreen;
+$formButtonBG               : $darkGreen;
+$formLabelBG                : $darkGreen;
 $navToggleHoverBG           : lighten($transparentBlack, 10%);
 $collapsingMenuBG           : $transparentBlack;
 $fullNavBG                  : $darkOrange;
@@ -104,4 +109,4 @@ $carouselActiveBG           : $fontWhite;
 $formButtonHoverBG          : lighten($formButtonBG, 10%);
 $aboutImageWrapper          : $fontWhite;
 $faBG                       : $transparentBlack;
-
+$descriptionBG              : $transparentBlack;

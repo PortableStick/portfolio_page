@@ -2,7 +2,6 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
 @import "_variables.scss";
@@ -15,7 +14,10 @@ a:hover, a:visited, a:focus {
   text-decoration: none; }
 
 .container-fluid {
-  padding: 0; }
+  padding: 0; 
+  margin: 0;
+  overflow-x: hidden; //fixes right gap on ios devices
+}
 
 .tmpclear {
   clear: none; }
@@ -23,7 +25,9 @@ a:hover, a:visited, a:focus {
 /* For scrollspy
 ================================ */
 body {
-  position: relative; }
+  position: relative; 
+  width: 100%;
+}
 
 /* Set margin for all sections except landing
 ================================ */
@@ -115,10 +119,10 @@ nav.inbody {
   background-image: $landingRadialGrad, url("https://dl.dropboxusercontent.com/u/4223104/images/landingbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
   position: relative;
   padding: 0; 
-
+  
   h1.title {
     @include fonts($titleFont);
     font-size: 38px;
@@ -143,7 +147,7 @@ nav.inbody {
 
 #refs {
   position: relative;
-  top: 65%; 
+  top: 77%; 
   i{
     background-color: $faBG;
     border-radius: 5px;
@@ -152,7 +156,7 @@ nav.inbody {
   
   .fa{
     text-shadow: 3px 3px 3px $textShadow;
-    font-size: 4em;
+    font-size: 2em;
   }
 
   a {
@@ -203,7 +207,7 @@ div.web {
   text-align: center; }
 
 div.expressjs {
-  font-size: 5.5em; }
+  font-size: 3em; }
 
 div.expressjs > a {
   text-decoration: none; }
@@ -214,10 +218,24 @@ div.expressjs > a:hover {
 /* Page - Portfolio
 ================================ */
 #portfolio {
-  height: 100vh; }
+  height: 100vh; 
+  user-select: none;
 
-#portfolio .carousel, #portfolio .carousel .carousel-inner, #portfolio .carousel .carousel-inner .item, #portfolio .carousel .carousel-inner .item .empty {
-  height: 100%; }
+  
+}
+
+#portfolio .carousel, 
+#portfolio .carousel .carousel-inner, 
+#portfolio .carousel .carousel-inner .item, 
+#portfolio .carousel .carousel-inner .item .empty {
+  height: 100%; 
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    min-height: 50vh;
+  }
+}
 
 .empty h3 {
   font-size: 6em;
@@ -227,12 +245,33 @@ div.expressjs > a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.description {
+  background-color: $descriptionBG;
+  padding: 15px 30px;
+  color: $descriptionColor;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  border-radius: 15px;
+  h3{
+    font-size: 1.2em;
+    @include fonts($descriptionHeadingFont, $descriptionHeadingFontWt);
+  }
+  p{
+    font-size: 1em;
+    @include fonts($descriptionTextFont);
+  }
+  //transform: translateX(-50%) translateY(-50%); 
+}
 
 .empty {
   background-color: $carouselBG;
   height: 50vh;
-  text-align: center; }
+  text-align: center; 
+}
 
 .carousel-indicators li {
   background-color: $carouselIndicatorBG;
@@ -311,7 +350,7 @@ footer a:hover {
   color: $footerLinkHover; }
 
 footer h5 {
-  font-size: 1.4em;
+  font-size: 1em;
   margin: 0;
   padding-top: 2px;
   padding-right: 10px; }
@@ -344,13 +383,27 @@ Media queries
   #landing, #about, #portfolio {
     height: 100vh; }
   #contact {
-    height: 90vh; } }
+    height: 90vh; } 
+  #portfolio .description img{
+    height: 100%;
+    width: 100%;
+  }
+}
 
 /* font sizing
 ================================ */
 @media (min-width: 500px) {
   #landing h1.title {
-    font-size: 45px; } }
+    font-size: 45px; } 
+  #portfolio .description{
+    h3{
+      font-size: 2em;
+    }
+    p{
+      font-size: 1.6em;
+    }
+  }  
+}
 
 @media (min-width: 900px) {
   #landing h1.title {
