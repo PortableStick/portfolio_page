@@ -15,9 +15,7 @@ a:hover, a:visited, a:focus {
 
 .container-fluid {
   padding: 0; 
-  margin: 0;
-  overflow-x: hidden; //fixes right gap on ios devices
-}
+  overflow-x: hidden; /*fixes right gap on ios devices*/}
 
 .tmpclear {
   clear: none; }
@@ -28,10 +26,10 @@ body {
   position: relative; 
 }
 
-/* Set margin for all sections except landing
+/* Set padding for all sections except landing
 ================================ */
 #about, #contact, #portfolio {
-  padding-top: 50px; }
+  padding-top: 60px; }
 
 /* Make sure pages clear each other
 ================================ */
@@ -172,6 +170,11 @@ nav.inbody {
 
 /* Page -- about
 ================================ */
+
+#about .wrapper{
+  height: auto;
+}
+
 #about #bio p {
   font-size: 1.6em;
   line-height: 150%;
@@ -193,7 +196,7 @@ img#portpic {
 
 a img {
   max-width: 80%;
-  max-height: 100px; }
+  max-height: 80px; }
 
 div.web-wrapper {
   background-color: $aboutImageWrapper;
@@ -460,8 +463,6 @@ Media queries
 /* Center bio stuff @890px
 ================================ */
 @media (min-width: 890px) {
-  #about .wrapper {
-    margin-top: 12%; }
   .tmpclear {
     clear: both; } }
 
