@@ -1,5 +1,5 @@
 (function () {
-    "use strict";
+    'use strict';
 
     var topOffset = 50;
 
@@ -24,7 +24,7 @@
     }());
 
     $('.carousel').carousel({
-        pause: "false"
+        pause: 'false'
     });
 }());
 
