@@ -142,30 +142,7 @@ nav.inbody {
   color: $fireColor;
 }
 
-#refs {
-  position: relative;
-  top: 77%; 
-  i{
-    background-color: $faBG;
-    border-radius: 5px;
-    padding: 13px;
-  }
-  
-  .fa{
-    text-shadow: 3px 3px 3px $textShadow;
-    font-size: 2em;
-  }
 
-  a {
-    color: $titleLinks;
-    max-width: 25%;
-    padding: 0 5px;
-    text-align: center; 
-    span.refs-text {
-      @include fonts($referenceLinkFont); 
-    }
-  }
-}
 
 
 /* Page -- about
@@ -173,6 +150,7 @@ nav.inbody {
 
 #about .wrapper{
   height: auto;
+  border-radius: 5%;
 }
 
 #about #bio p {
@@ -180,19 +158,23 @@ nav.inbody {
   line-height: 150%;
   @include fonts($bioFont); 
   color: $aboutFontColor;
+  padding: 5px;
 }
 
 img#portpic {
   width: 100%;
   padding: 10px 10px 20px;
-  border-radius: 5% 5% 0 0; }
+  //border-radius: 5% 5% 5% 5%; 
+  box-shadow: 0 10px 20px -15px $portPicBorder;
+}
 
 #about .image-wrap {
   padding-bottom: 10px;
   background-color: $aboutImageWrapper;
   width: 70%;
   height: auto;
-  margin: 5px auto 20px; }
+  margin: 5px auto 20px; 
+}
 
 a img {
   max-width: 80%;
@@ -200,13 +182,23 @@ a img {
 
 div.web-wrapper {
   background-color: $aboutImageWrapper;
-  clear: left; }
+  clear: left; 
+  border-radius: 5%;
+}
 
 div.web-wrapper .row {
-  padding: 10px; }
+  padding: 10px; 
+}
 
 div.web {
-  text-align: center; }
+  text-align: center;
+  img, span {
+    box-shadow: 0px 7px 15px -10px $webBorder;
+  } 
+   &:last-child{
+    padding-top: 6px;
+  }
+}
 
 div.expressjs {
   font-size: 3em; }
@@ -220,7 +212,7 @@ div.expressjs > a:hover {
 /* Page - Portfolio
 ================================ */
 #portfolio {
-  height: 100vh; 
+  height: 50vh; 
   user-select: none;
 
   
@@ -251,13 +243,16 @@ div.expressjs > a:hover {
 }
 
 .description {
+  height: 100%;
+  width: 100%;
   background-color: $descriptionBG;
-  padding: 15px 30px;
+  padding: 22px 35px;
   color: $descriptionColor;
   position: absolute;
-  top: 50%;
-  left: 10%;
-  border-radius: 15px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  //border-radius: 15px;
   h3{
     font-size: 1.2em;
     @include fonts($descriptionHeadingFont, $descriptionHeadingFontWt);
@@ -271,7 +266,7 @@ div.expressjs > a:hover {
 
 .empty {
   background-color: $carouselBG;
-  height: 50vh;
+  height: auto;
   text-align: center; 
 }
 
@@ -294,10 +289,12 @@ div.expressjs > a:hover {
 
 form {
   padding-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
 
 form label {
-  font-size: 1.6em;
+  font-size: 1.2em;
   text-align: center;
   background-color: $formLabelBG;
   color: $formText;
@@ -331,6 +328,30 @@ form label {
 form label, .btn-lg {
    @include fonts($formFont, $formFontWeight);  
  }
+
+ #refs {
+    margin-left: 20vw;
+  i{
+    //background-color: $faBG;
+    border-radius: 5px;
+    padding: 4%;
+  }
+  
+  .fa{
+    text-shadow: 3px 3px 3px $textShadow;
+    font-size: 2.3em;
+  }
+
+  a {
+    color: $refTexts;
+    max-width: 25%;
+    padding: 0 5px;
+    text-align: center; 
+    span.refs-text {
+      @include fonts($referenceLinkFont); 
+    }
+  }
+}
 
 /* Footer
 ================================ */
@@ -399,10 +420,11 @@ Media queries
     font-size: 45px; } 
   #portfolio .description{
     h3{
-      font-size: 2em;
+      margin-top: 36%;
+      font-size: 3.6em;
     }
     p{
-      font-size: 1.6em;
+      font-size: 2em;
     }
   }  
 }
@@ -420,17 +442,30 @@ Media queries
     font-size: 4rem; }
   #refs a span.refs-text {
     font-size: 2rem; } 
-
   }
 
 @media (min-width: 1200px) {
   div.expressjs {
     font-size: 4em; } 
+  #refs i{
+    padding-top: 2%;
+  }  
   #refs a .fa{
     font-size: 4.8rem; }
   #refs a span.refs-text {
     font-size: 2.5rem; }
+  div.web{
+    img, span {
+      box-shadow: none;
+    } 
   }
+}
+
+@media (min-width: 1400px) {
+  #bio {
+    padding-top: 6vw;  
+  }
+}
 
 @media (min-width: 1600px) {
   #refs a .fa{
@@ -441,6 +476,9 @@ Media queries
 
 @media (min-width: 900px) {
   /*form*/
+  form {
+    margin-bottom: 0;
+  }
   form label {
     text-align: right;
     font-size: 3em; }
@@ -450,7 +488,15 @@ Media queries
     margin-top: 10px;
     height: 6rem; }
   .form-group-lg textarea.form-control {
-    height: 400px; } }
+    height: 300px; 
+    } 
+  #refs {
+    margin-left: 30vw;
+    .fa {
+      font-size: 3.5em;
+    }
+  }
+}
 
 /* Image sizing
 ================================ */

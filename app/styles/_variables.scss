@@ -64,7 +64,7 @@ $landingRadialGrad          : radial-gradient(circle at 0 0,transparentize($ligh
 /*Text*/
 
 $titleFontColor             : $fontWhite;
-$titleLinks                 : $fontWhite;
+$refTexts                   : $fontBlack;
 $navLinks                   : $fontWhite;
 $navHoverColor              : $lightGreen;
 $brandColor                 : $fontWhite;
@@ -83,7 +83,7 @@ $formButtonTextHover        : $formButtonText;
 $linkedinColor              : $deepBlue;
 $githubColor                : $deepGreen;
 $fireColor                  : $deepOrange;
-$descriptionColor           : $fontWhite;
+$descriptionColor           : white;
 
 $textShadow                 : $transparentBlack;
 /*Borders*/
@@ -92,7 +92,8 @@ $activeBorderBottom         : $oliveGreen;
 $navToggleBorder            : $fontWhite;
 $navToggleInnerBars         : $fontWhite;
 $carouselIndicatorBorder    : $darkGrey;
-
+$portPicBorder              : $transparentBlack;
+$webBorder                  : transparentize($transparentBlack, 0.5);
 $formBoxShadow              : transparentize($fontBlack, .3);
 
 /*Backgrounds*/
@@ -107,6 +108,6 @@ $carouselBG                 : $lightGrey;
 $carouselIndicatorBG        : $darkGrey;
 $carouselActiveBG           : $fontWhite;
 $formButtonHoverBG          : lighten($formButtonBG, 10%);
-$aboutImageWrapper          : $fontWhite;
+$aboutImageWrapper          : white;
 $faBG                       : $transparentBlack;
-$descriptionBG              : $transparentBlack;
+$descriptionBG              : transparentize($fontBlack, .4);
