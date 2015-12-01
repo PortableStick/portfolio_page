@@ -29,7 +29,10 @@ body {
 /* Set padding for all sections except landing
 ================================ */
 #about, #contact, #portfolio {
-  padding-top: 60px; }
+  overflow-y: hidden;
+  padding-top: 60px; 
+  height: auto;
+}
 
 /* Make sure pages clear each other
 ================================ */
@@ -148,8 +151,11 @@ nav.inbody {
 /* Page -- about
 ================================ */
 
-#about .wrapper{
+#about {
   height: auto;
+}
+
+#about .wrapper{
   border-radius: 5%;
 }
 
@@ -212,7 +218,7 @@ div.expressjs > a:hover {
 /* Page - Portfolio
 ================================ */
 #portfolio {
-  height: 50vh; 
+  min-height: 50vh; 
   user-select: none;
 
   
@@ -223,7 +229,6 @@ div.expressjs > a:hover {
 #portfolio .carousel .carousel-inner .item, 
 #portfolio .carousel .carousel-inner .item .empty {
   height: 100%; 
-  overflow: hidden;
 
   img{
     width: 100%;
@@ -435,9 +440,9 @@ Media queries
     left: 15%;
     font-size: 92px; }
   #about #bio p {
-    font-size: 1.6em; } 
+    font-size: 1.4em; } 
   #about {
-    padding-top: 20vh;
+    padding-top: 12vh;
   }
 }
 
