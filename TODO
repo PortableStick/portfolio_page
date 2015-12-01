@@ -1,9 +1,8 @@
 TODO
-Move contact links away from front page
-Fix sweatpants
-    - no corners on boxes
-    - no grey boxes
-Make bio bigger on bigger screens
-No scroll on About page
-Fix portfolio slider on mobile
-Padding on contact page
+Contact page does not fill whole viewport on desktop size 
+LinkedIn link may be suboptimal - sending user to my edit page and crashing? the browser
+about page is very empty on full screen, photo too large
+add back buttons to projects
+
+
+EVENTUALLY get contact page working

@@ -406,7 +406,7 @@ Media queries
   #landing, #about, #portfolio {
     height: 100vh; }
   #contact {
-    height: 90vh; } 
+    height: 95vh; } 
   #portfolio .description img{
     height: 100%;
     width: 100%;
@@ -435,7 +435,11 @@ Media queries
     left: 15%;
     font-size: 92px; }
   #about #bio p {
-    font-size: 1.6em; } }
+    font-size: 1.6em; } 
+  #about {
+    padding-top: 20vh;
+  }
+}
 
 @media (min-width: 992px) {
   #refs a .fa{
