@@ -1,19 +1,32 @@
-$icon-font-path: '../fonts/';
-@import "_variables.scss";
+$icon-font-path: "../fonts/";
 
+@import "variables";
+@import "mixins";
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-a:hover, a:visited, a:focus {
-  text-decoration: none; }
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
 
 .container-fluid {
   padding: 0;
-  overflow-x: hidden; /*fixes right gap on ios devices*/}
+  overflow-x: hidden;
+
+  /*fixes right gap on ios devices*/
+}
 
 .tmpclear {
-  clear: none; }
+  clear: none;
+
+  @include min(890) {
+    clear: both;
+  }
+}
 
 /* For scrollspy
 ================================ */
@@ -23,50 +36,60 @@ body {
 
 /* Set padding for all sections except landing
 ================================ */
-#about, #contact, #portfolio {
-  overflow-y: hidden;
-  padding-top: 60px;
+#about,
+#contact,
+#portfolio {
   height: auto;
+  padding-top: 60px;
+  overflow-y: hidden;
 }
 
 /* Make sure pages clear each other
 ================================ */
 .page {
-  clear: both; }
+  clear: both;
+}
 
 /* Navigation
 ================================ */
 nav.navbar {
   h1 {
     font-size: 2em;
+
     @include fonts($navbarFont, $navbarFontWeight);
   }
 }
 
 nav ul {
+  padding: 0 5%;
   margin: 0;
-  padding: 0 5%; }
+}
 
 nav.navbar-nav {
-  bottom: 0; }
+  bottom: 0;
+}
 
 nav.navbar-default {
   padding: 0;
   background-color: transparent;
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 nav h1.navbar-brand {
-  margin: 0 0 10px 0; }
+  margin: 0 0 10px 0;
+}
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:visited {
-  color: $navLinks;
-  @include fonts($navbarFont, $navbarFontWeight);
-  font-variant: bold;
   font-size: 1.8em;
+  font-variant: bold;
+  color: $navLinks;
+
+  @include fonts($navbarFont, $navbarFontWeight);
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: $navHoverColor; }
+  color: $navHoverColor;
+}
 
 .navbar-default .navbar-nav > .active > a {
   background-color: transparent;
@@ -75,115 +98,164 @@ nav h1.navbar-brand {
 
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
   color: $activeLinkHover;
+  background-color: transparent;
 }
 
 .navbar-default .navbar-brand {
-  color: $brandColor; }
+  color: $brandColor;
+}
 
 .navbar-default .navbar-brand:hover {
   color: $brandHoverColor;
-  cursor: default; }
+  cursor: default;
+}
 
 nav div.collapse.in, nav div.collapsing {
   background-color: $collapsingMenuBG;
-  border: none; }
+  border: none;
+}
 
 .navbar-default .navbar-toggle {
   border-color: $navToggleBorder;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: $navToggleInnerBars; }
+  background-color: $navToggleInnerBars;
+}
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: $navToggleHoverBG;
 }
 
 nav.inbody {
-  background-color: $fullNavBG;
   background: $mainGrad;
+  background-color: $fullNavBG;
 }
-
-
 
 /* Page -- landing
 ================================ */
 #landing {
-  background-image: $landingRadialGrad, url("https://dl.dropboxusercontent.com/u/4223104/images/landingbg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   position: relative;
   padding: 0;
+  background-image: $landingRadialGrad, url("https://dl.dropboxusercontent.com/u/4223104/images/landingbg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(890) {
+    height: 50vh;
+  }
+
+
+  @include min(890) {
+    height: 100vh;
+  }
+
 
   h1.title {
-    @include fonts($titleFont);
-    font-size: 38px;
-    color: $titleFontColor;
+    position: absolute;
     top: 35%;
     left: 40px;
-    position: absolute;
+    font-size: 38px;
+    color: $titleFontColor;
+
+    @include fonts($titleFont);
+
+    @include min(500) {
+      font-size: 45px;
+    }
+
+
+    @include min(900) {
+      top: 35%;
+      left: 15%;
+      font-size: 92px;
+    }
   }
 }
 
-.fa-linkedin{
+.fa-linkedin {
   color: $linkedinColor;
 }
 
-.fa-github{
+.fa-github {
   color: $githubColor;
 }
 
-.fa-fire{
+.fa-fire {
   color: $fireColor;
 }
-
-
-
 
 /* Page -- about
 ================================ */
 
 #about {
   height: auto;
-}
 
-#about .wrapper{
-  border-radius: 5%;
-}
+  @include min(890) {
+    height: 100vh;
+  }
 
-#about #bio p {
-  font-size: 1.6em;
-  line-height: 150%;
-  @include fonts($bioFont);
-  color: $aboutFontColor;
-  padding: 5px;
+
+  @include min(900) {
+    padding-top: 12vh;
+  }
+
+
+  .wrapper {
+    border-radius: 5%;
+  }
+
+  #bio {
+    @include min(1400) {
+      padding-top: 6vw;
+    }
+
+
+    p {
+      padding: 5px;
+      font-size: 1.6em;
+      line-height: 150%;
+      color: $aboutFontColor;
+
+      @include fonts($bioFont);
+
+      @include min(900) {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  .image-wrap {
+    width: 70%;
+    height: auto;
+    padding-bottom: 10px;
+    margin: 5px auto 20px 80px;
+    background-color: $aboutImageWrapper;
+
+    @include min(768) {
+      float: left;
+      width: 40%;
+      margin-right: 20px;
+    }
+  }
 }
 
 img#portpic {
-  width: 100%;
+  max-width: 500px;
   padding: 10px 10px 20px;
-  //border-radius: 5% 5% 5% 5%;
   box-shadow: 0 10px 20px -15px $portPicBorder;
-}
-
-#about .image-wrap {
-  padding-bottom: 10px;
-  background-color: $aboutImageWrapper;
-  width: 70%;
-  height: auto;
-  margin: 5px auto 20px;
 }
 
 a img {
   max-width: 80%;
-  max-height: 80px; }
+  max-height: 80px;
+}
 
 div.web-wrapper {
-  background-color: $aboutImageWrapper;
   clear: left;
+  background-color: $aboutImageWrapper;
   border-radius: 5%;
 }
 
@@ -193,22 +265,36 @@ div.web-wrapper .row {
 
 div.web {
   text-align: center;
-  img, span {
-    box-shadow: 0px 7px 15px -10px $webBorder;
+
+  img,
+  span {
+    box-shadow: 0 7px 15px -10px $webBorder;
+
+    @include min(1200) {
+      box-shadow: none;
+    }
   }
-   &:last-child{
+
+  &:last-child {
     padding-top: 6px;
   }
 }
 
-div.expressjs {
-  font-size: 3em; }
+.expressjs {
+  font-size: 3em;
+
+  @include min(1200) {
+    font-size: 4em;
+  }
+}
 
 div.expressjs > a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 div.expressjs > a:hover {
-  color: steelblue; }
+  color: steelblue;
+}
 
 /* Page - Portfolio
 ================================ */
@@ -216,7 +302,9 @@ div.expressjs > a:hover {
   min-height: 50vh;
   user-select: none;
 
-
+  @include min(890) {
+    height: 100vh;
+  }
 }
 
 #portfolio .carousel,
@@ -225,49 +313,69 @@ div.expressjs > a:hover {
 #portfolio .carousel .carousel-inner .item .empty {
   height: 100%;
 
-  img{
+  img {
     width: 100%;
     min-height: 50vh;
   }
 }
 
 .empty h3 {
-  font-size: 6em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  color: $carouselFont;
   position: absolute;
   top: 50%;
   left: 50%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 6em;
+  font-weight: 700;
+  color: $carouselFont;
   transform: translateX(-50%) translateY(-50%);
 }
 
 .description {
-  height: 100%;
-  width: 100%;
-  background-color: $descriptionBG;
-  padding: 22px 35px;
-  color: $descriptionColor;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 22px 35px;
+  color: $descriptionColor;
   text-align: center;
+  background-color: $descriptionBG;
+
   //border-radius: 15px;
-  h3{
+
+  h3 {
     font-size: 1.2em;
+
     @include fonts($descriptionHeadingFont, $descriptionHeadingFontWt);
+
+    @include min(500) {
+      margin-top: 36%;
+      font-size: 3.6em;
+    }
   }
-  p{
+
+  p {
     font-size: 1em;
+
     @include fonts($descriptionTextFont);
+
+    @include min(500) {
+      font-size: 2em;
+    }
   }
-  //transform: translateX(-50%) translateY(-50%);
+
+  .description img {
+    @include min(890) {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .empty {
-  background-color: $carouselBG;
   height: auto;
   text-align: center;
+  background-color: $carouselBG;
 }
 
 .carousel-indicators li {
@@ -276,79 +384,156 @@ div.expressjs > a:hover {
 }
 
 .carousel-indicators li.active {
-  background-color: $carouselActiveBG; }
+  background-color: $carouselActiveBG;
+}
 
 /* Page - Contact
 ================================ */
+#contact {
+  @include max(890) {
+    padding-bottom: 20px;
+  }
+
+
+  @include min(890) {
+    height: 95vh;
+  }
+}
+
 #contact h2 {
   font-size: 3.5em;
-  text-align: center;
   color: $contactHeading;
+  text-align: center;
+
   @include fonts($ContactHeadingFont, $ContactHeadingFontWeight);
 }
 
 form {
   padding-top: 20px;
-  margin-bottom: 20px;
   padding-right: 10px;
-}
+  margin-bottom: 20px;
 
-form label {
-  font-size: 1.2em;
-  text-align: center;
-  background-color: $formLabelBG;
-  color: $formText;
-  padding: 10px 0;
-  box-shadow: -4px 4px 7px 1px $formBoxShadow;
+  @include min(900) {
+    margin-bottom: 0;
+
+    .btn-lg {
+      font-size: 2.5em;
+    }
+  }
+
+
+  label {
+    padding: 10px 0;
+    font-size: 1.2em;
+    color: $formText;
+    text-align: center;
+    background-color: $formLabelBG;
+    box-shadow: -4px 4px 7px 1px $formBoxShadow;
+
+    @include min(900) {
+      font-size: 3em;
+      text-align: right;
+    }
+  }
 }
 
 .form-group {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 .form-group-lg .form-control {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+
+  @include min(900) {
+    margin-top: 10px;
+  }
+}
 
 .btn-lg {
   padding: 16px 20px;
-  background-color: $formButtonBG;
-  color: $formButtonText;
   font-size: 1.6em;
+  color: $formButtonText;
   text-transform: uppercase;
-  box-shadow: 0px 6px 7px -3px $formBoxShadow;
+  background-color: $formButtonBG;
+  box-shadow: 0 6px 7px -3px $formBoxShadow;
 }
 
-.btn-lg:hover{
-  background-color: $formButtonHoverBG;
+.btn-lg:hover {
   color: $formButtonTextHover;
+  background-color: $formButtonHoverBG;
 }
 
 .form-group-lg textarea.form-control {
-  height: 150px; }
+  height: 150px;
+}
 
 form label, .btn-lg {
-   @include fonts($formFont, $formFontWeight);
- }
+  @include fonts($formFont, $formFontWeight);
+}
 
- #refs {
-    margin-left: 20vw;
-  i{
-    //background-color: $faBG;
-    border-radius: 5px;
-    padding: 4%;
+#refs {
+  margin-left: 20vw;
+
+  @include min(900) {
+    margin-left: 30vw;
   }
 
-  .fa{
-    text-shadow: 3px 3px 3px $textShadow;
-    font-size: 2.3em;
+
+  i {
+    padding: 4%;
+    border-radius: 5px;
+
+    @include min(1200) {
+      padding-top: 2%;
+    }
   }
 
   a {
-    color: $refTexts;
     max-width: 25%;
     padding: 0 5px;
+    color: $refTexts;
     text-align: center;
-    span.refs-text {
+
+    .fa {
+      font-size: 2.3em;
+      text-shadow: 3px 3px 3px $textShadow;
+
+      @include min(990) {
+        font-size: 4rem;
+      }
+
+
+      @include min(1200) {
+        font-size: 4.8rem;
+      }
+
+
+      @include min(1600) {
+        font-size: 5.8rem;
+      }
+
+
+      @include min(900) {
+        font-size: 3.5em;
+      }
+    }
+
+    .refs-text {
       @include fonts($referenceLinkFont);
+
+      @include min(990) {
+        font-size: 2rem;
+      }
+
+
+      @include min(1200) {
+        font-size: 2.5rem;
+      }
+
+
+      @include min(1600) {
+        font-size: 3.5rem;
+      }
     }
   }
 }
@@ -356,164 +541,43 @@ form label, .btn-lg {
 /* Footer
 ================================ */
 footer {
-  background-color: $footerBG;
-  background: $mainGrad;
-  color: $CopyrightColor;
+  padding: 7px 0;
   margin: 0;
-  padding:7px 0;
   clear: both;
+  color: $CopyrightColor;
+  background: $mainGrad;
+  background-color: $footerBG;
 }
 
 footer a, footer a:focus {
+  padding: 0 10px;
   font-size: 1.3em;
   color: $footerLinks;
-  padding: 0 10px; }
+}
 
 footer a:hover {
-  color: $footerLinkHover; }
+  color: $footerLinkHover;
+}
 
 footer h5 {
-  font-size: 1em;
-  margin: 0;
   padding-top: 2px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  margin: 0;
+  font-size: 1em;
+}
 
 .social-links {
-  float: left; }
+  float: left;
+}
 
 .copyright {
+  float: right;
   cursor: default;
-  user-select:none;
-  float: right; }
+  user-select: none;
+}
 
 .clearme {
-  clear: both; }
-
-/**************************
-Media queries
-**************************/
-/* Prevent collapse at less than 890px
-================================ */
-@media (max-width: 890px) {
-  #landing {
-    height: 50vh; }
-  #contact {
-    padding-bottom: 20px; } }
-
-/* Make all pages 100% vh at desktop sizes
-================================ */
-@media (min-width: 890px) {
-  #landing, #about, #portfolio {
-    height: 100vh; }
-  #contact {
-    height: 95vh; }
-  #portfolio .description img{
-    height: 100%;
-    width: 100%;
-  }
+  clear: both;
 }
-
-/* font sizing
-================================ */
-@media (min-width: 500px) {
-  #landing h1.title {
-    font-size: 45px; }
-  #portfolio .description{
-    h3{
-      margin-top: 36%;
-      font-size: 3.6em;
-    }
-    p{
-      font-size: 2em;
-    }
-  }
-}
-
-@media (min-width: 900px) {
-  #landing h1.title {
-    top: 35%;
-    left: 15%;
-    font-size: 92px; }
-  #about #bio p {
-    font-size: 1.4em; }
-  #about {
-    padding-top: 12vh;
-  }
-}
-
-@media (min-width: 992px) {
-  #refs a .fa{
-    font-size: 4rem; }
-  #refs a span.refs-text {
-    font-size: 2rem; }
-  }
-
-@media (min-width: 1200px) {
-  div.expressjs {
-    font-size: 4em; }
-  #refs i{
-    padding-top: 2%;
-  }
-  #refs a .fa{
-    font-size: 4.8rem; }
-  #refs a span.refs-text {
-    font-size: 2.5rem; }
-  div.web{
-    img, span {
-      box-shadow: none;
-    }
-  }
-}
-
-@media (min-width: 1400px) {
-  #bio {
-    padding-top: 6vw;
-  }
-}
-
-@media (min-width: 1600px) {
-  #refs a .fa{
-    font-size: 5.8rem; }
-  #refs a span.refs-text {
-    font-size: 3.5rem; }
-  }
-
-@media (min-width: 900px) {
-  /*form*/
-  form {
-    margin-bottom: 0;
-  }
-  form label {
-    text-align: right;
-    font-size: 3em; }
-  form .btn-lg {
-    font-size: 2.5em; }
-  .form-group-lg .form-control {
-    margin-top: 10px;
-    height: 6rem; }
-  .form-group-lg textarea.form-control {
-    height: 300px;
-    }
-  #refs {
-    margin-left: 30vw;
-    .fa {
-      font-size: 3.5em;
-    }
-  }
-}
-
-/* Image sizing
-================================ */
-@media (min-width: 768px) {
-  #about .image-wrap {
-    width: 40%;
-    float: left;
-    margin-right: 20px; } }
-
-/* Center bio stuff @890px
-================================ */
-@media (min-width: 890px) {
-  .tmpclear {
-    clear: both; } }
 
 /*# sourceMappingURL=application.css.map */

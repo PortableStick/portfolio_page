@@ -1,0 +1,16 @@
+@mixin fonts($font-stack, $font-weight: 400) {
+  font-family: $font-stack;
+  font-weight: $font-weight;
+}
+
+@mixin max($max) {
+  @media (max-width: $max + "px") {
+    @content;
+  }
+}
+
+@mixin min($min) {
+  @media (min-width: $min + "px") {
+    @content;
+  }
+}
