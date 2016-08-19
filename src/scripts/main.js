@@ -1,6 +1,6 @@
 $(document).ready(function() {
     'use strict';
-
+    //scrollSpy
     var topOffset = 50;
 
     $('body').scrollspy({
@@ -23,8 +23,14 @@ $(document).ready(function() {
         }
     }());
 
+    //Carousel
     $('.carousel').carousel({
         pause: 'false'
+    });
+
+    //Navbar auto close
+    $('.navbar-collapse a').click(function() {
+        $(".navbar-collapse").collapse('hide').addClass('collapsed');
     });
 });
 
