@@ -1,113 +1,108 @@
-/* Mixins
-================================ */
-
-@mixin fonts($fontStack, $fontWeight: 400){
-    font-family: $fontStack;
-    font-weight: $fontWeight;
-}
-
 /* Font delcarations
 ================================ */
 @import url(https://fonts.googleapis.com/css?family=Merriweather|Josefin+Slab:700,600|Comfortaa);
 
-$Merriweather               : 'Merriweather', serif;
-$Josefin                    : 'Josefin Slab', serif;
-$Comfortaa                  : 'Comfortaa', sans-serif;
+$merriweather: "Merriweather", serif;
+$josefin: "Josefin Slab", serif;
+$comfortaa: "Comfortaa", sans-serif;
 
 /* Font assignments
 ================================ */
 
-$navbarFont                 : $Comfortaa;
-$navbarFontWeight           : 600;
-$titleFont                  : $Comfortaa;
-$referenceLinkFont          : $Comfortaa;
-$bioFont                    : $Merriweather;
-$ContactHeadingFont         : $Comfortaa;
-$ContactHeadingFontWeight   : 700;
-$formFont                   : $Josefin;
-$formFontWeight             : 700;
-$descriptionHeadingFont     : $Josefin;
-$descriptionHeadingFontWt   : 700;
-$descriptionTextFont        : $Merriweather;
+$navbar-font: $comfortaa;
+$navbar-font-weight: 600;
+$title-font: $comfortaa;
+$reference-link-font: $comfortaa;
+$bio-font: $merriweather;
+$contact-heading-font: $comfortaa;
+$contact-heading-font-weight: 700;
+$form-font: $josefin;
+$form-font-weight: 700;
+$description-heading-font: $josefin;
+$description-heading-font-wt: 700;
+$description-text-font: $merriweather;
 
 /* Color declarations
 ================================ */
-$fontWhite                  : #eee;
-$fontBlack                  : #444;
-$lightGreen                 : #EAF9C1;
-$oliveGreen                 : #a2ad86;
-$lightGrey                  : #ddd;
-$darkGreen                  : #2F4525;
+$font-white: #eee;
+$font-black: #444;
+$light-green: #eaf9c1;
+$olive-green: #a2ad86;
+$light-grey: #ddd;
+$dark-green: #2f4525;
 
-$deepBlue                   : #332CFF;
-$deepGreen                  : #37850D;
-$deepOrange                 : #C34714;
-$darkOrange                 : #452513;
-$sandyOrange                : #522C17;
-$transparentBlack           : rgba(25, 25, 25, 0.8);
-$darkUrple                  : #332327;
-$lightUrple                 : rgba(69,47,53,0.9);
+$deep-blue: #332cff;
+$deep-green: #37850d;
+$deep-orange: #c34714;
+$dark-orange: #452513;
+$sandy-orange: #522c17;
+$transparent-black: rgba(25, 25, 25, 0.8);
+$dark-urple: #332327;
+$light-urple: rgba(69, 47, 53, 0.9);
 
-$lightPink                  : rgba(218, 178, 143, 0.38);
+$light-pink: rgba(218, 178, 143, 0.38);
 
-$darkGrey                   : #5d5d5d;
-$dullGreen                  : #909a54;
+$dark-grey: #5d5d5d;
+$dull-green: #909a54;
+$steelblue: #4682b4;
 
 /*Gradient*/
 
-$mainGrad                   : linear-gradient(to right, $lightUrple 0%,$darkUrple 100%);
-$landingRadialGrad          : radial-gradient(circle at 0 0,transparentize($lightUrple, 0.5) 10%, transparent 100%);
+$main-grad: linear-gradient(to right, $light-urple 0%, $dark-urple 100%);
+$landing-radial-grad: radial-gradient(circle at 0 0, transparentize($light-urple, 0.5) 10%, transparent 100%);
 
 /* Color assignments
 ================================ */
 
 /*Text*/
 
-$titleFontColor             : $fontWhite;
-$refTexts                   : $fontBlack;
-$navLinks                   : $fontWhite;
-$navHoverColor              : $lightGreen;
-$brandColor                 : $fontWhite;
-$brandHoverColor            : darken($brandColor, 10%);
-$CopyrightColor             : $fontWhite;
-$footerLinks                : $fontWhite;
-$footerLinkHover            : $lightGreen;
-$aboutFontColor             : $fontBlack;
-$formText                   : $fontWhite;
-$formButtonText             : $fontWhite;
-$activeLinkHover            : $navHoverColor;
-$carouselFont               : $darkGrey;
-$contactHeading             : $fontBlack;
-$formButtonTextHover        : $formButtonText;
+$title-font-color: $font-white;
+$ref-texts: $font-black;
+$nav-links: $font-white;
+$nav-hover-color: $light-green;
+$brand-color: $font-white;
+$brand-hover-color: darken($brand-color, 10%);
+$copyright-color: $font-white;
+$footer-links: $font-white;
+$footer-link-hover: $light-green;
+$about-font-color: $font-black;
+$form-text: $font-white;
+$form-button-text: $font-white;
+$active-link-hover: $nav-hover-color;
+$carousel-font: $dark-grey;
+$contact-heading: $font-black;
+$form-button-text-hover: $form-button-text;
+$express-font-color: $steelblue;
 
-$linkedinColor              : $deepBlue;
-$githubColor                : $deepGreen;
-$fireColor                  : $deepOrange;
-$descriptionColor           : white;
+$linkedin-color: $deep-blue;
+$github-color: $deep-green;
+$fire-color: $deep-orange;
+$description-color: #fff;
 
-$textShadow                 : $transparentBlack;
+$text-shadow: $transparent-black;
+
 /*Borders*/
 
-$activeBorderBottom         : $oliveGreen;
-$navToggleBorder            : $fontWhite;
-$navToggleInnerBars         : $fontWhite;
-$carouselIndicatorBorder    : $darkGrey;
-$portPicBorder              : $transparentBlack;
-$webBorder                  : transparentize($transparentBlack, 0.5);
-$formBoxShadow              : transparentize($fontBlack, .3);
+$active-border-bottom: $olive-green;
+$nav-toggle-border: $font-white;
+$nav-toggle-inner-bars: $font-white;
+$carousel-indicator-border: $dark-grey;
+$port-pic-border: $transparent-black;
+$web-border: transparentize($transparent-black, 0.5);
+$form-box-shadow: transparentize($font-black, 0.3);
 
 /*Backgrounds*/
 
-$footerBG                   : $darkOrange;
-$formButtonBG               : $darkGreen;
-$formLabelBG                : $darkGreen;
-$navToggleHoverBG           : lighten($transparentBlack, 10%);
-$collapsingMenuBG           : $transparentBlack;
-$fullNavBG                  : $darkOrange;
-$carouselBG                 : $lightGrey;
-$carouselIndicatorBG        : $darkGrey;
-$carouselActiveBG           : $fontWhite;
-$formButtonHoverBG          : lighten($formButtonBG, 10%);
-$aboutImageWrapper          : white;
-$faBG                       : $transparentBlack;
-$descriptionBG              : transparentize($fontBlack, .4);
+$footer-bg: $dark-orange;
+$form-button-bg: $dark-green;
+$form-label-bg: $dark-green;
+$nav-toggle-hover-bg: lighten($transparent-black, 10%);
+$collapsing-menu-bg: $transparent-black;
+$full-nav-bg: $dark-orange;
+$carousel-bg: $light-grey;
+$carousel-indicator-bg: $dark-grey;
+$carousel-active-bg: $font-white;
+$form-button-hover-bg: lighten($form-button-bg, 10%);
+$about-image-wrapper: #fff;
+$fa-bg: $transparent-black;
+$description-bg: transparentize($font-black, 0.4);

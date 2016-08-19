@@ -1,0 +1,53 @@
+/* -page -- landing
+================================ */
+#landing {
+  position: relative;
+  padding: 0;
+  background-image: $landing-radial-grad, url("https://dl.dropboxusercontent.com/u/4223104/images/landingbg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(890) {
+    height: 50vh;
+  }
+
+
+  @include min(890) {
+    height: 100vh;
+  }
+
+
+  .title {
+    position: absolute;
+    top: 35%;
+    left: 40px;
+    font-size: 38px;
+    color: $title-font-color;
+
+    @include fonts($title-font);
+
+    @include min(500) {
+      font-size: 45px;
+    }
+
+
+    @include min(900) {
+      top: 35%;
+      left: 15%;
+      font-size: 92px;
+    }
+  }
+}
+
+.fa-linkedin {
+  color: $linkedin-color;
+}
+
+.fa-github {
+  color: $github-color;
+}
+
+.fa-fire {
+  color: $fire-color;
+}

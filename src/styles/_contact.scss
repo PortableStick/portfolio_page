@@ -1,0 +1,167 @@
+/* -page contact
+================================ */
+#contact {
+  h2 {
+    font-size: 3.5em;
+    color: $contact-heading;
+    text-align: center;
+
+    @include fonts($contact-heading-font, $contact-heading-font-weight);
+  }
+
+  @include max(890) {
+    padding-bottom: 20px;
+  }
+
+
+  @include min(890) {
+    height: 95vh;
+  }
+}
+
+form {
+  padding-top: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+
+  @include min(900) {
+    margin-bottom: 0;
+
+    .btn-lg {
+      font-size: 2.5em;
+    }
+  }
+
+
+  label {
+    padding: 10px 0;
+    font-size: 1.2em;
+    color: $form-text;
+    text-align: center;
+    background-color: $form-label-bg;
+    box-shadow: -4px 4px 7px 1px $form-box-shadow;
+
+    @include min(900) {
+      font-size: 3em;
+      text-align: right;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group-lg .form-control {
+  font-size: 1.6em;
+
+  &#message {
+    height: 150px;
+  }
+
+  @include min(900) {
+    height: 80px;
+  }
+}
+
+.btn-lg {
+  padding: 16px 20px 10px;
+  font-size: 1.6em;
+  color: $form-button-text;
+  text-transform: uppercase;
+  background-color: $form-button-bg;
+  box-shadow: 0 6px 7px -3px $form-box-shadow;
+}
+
+.btn-lg:hover {
+  color: $form-button-text-hover;
+  background-color: $form-button-hover-bg;
+}
+
+form label,
+.btn-lg {
+  @include fonts($form-font, $form-font-weight);
+}
+
+#refs {
+  margin-left: 20vw;
+  margin-top: 0;
+
+  @include min(900) {
+    margin-top: 50px;
+  }
+
+
+  @include min(1200) {
+    margin-top: 70px;
+  }
+
+
+  @include min(1600) {
+    margin-top: 90px;
+  }
+
+
+  @include min(900) {
+    margin-left: 30vw;
+  }
+
+
+  i {
+    padding: 4%;
+    border-radius: 5px;
+
+    @include min(1200) {
+      padding-top: 2%;
+    }
+  }
+
+  a {
+    max-width: 25%;
+    padding: 0 5px;
+    color: $ref-texts;
+    text-align: center;
+
+    .fa {
+      font-size: 2.3em;
+      text-shadow: 3px 3px 3px $text-shadow;
+
+      @include min(990) {
+        font-size: 4rem;
+      }
+
+
+      @include min(1200) {
+        font-size: 4.8rem;
+      }
+
+
+      @include min(1600) {
+        font-size: 5.8rem;
+      }
+
+
+      @include min(900) {
+        font-size: 3.5em;
+      }
+    }
+
+    .refs-text {
+      @include fonts($reference-link-font);
+
+      @include min(990) {
+        font-size: 2rem;
+      }
+
+
+      @include min(1200) {
+        font-size: 2.5rem;
+      }
+
+
+      @include min(1600) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

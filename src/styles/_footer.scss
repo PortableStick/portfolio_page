@@ -1,0 +1,42 @@
+/* -footer
+================================ */
+footer {
+  padding: 7px 0;
+  margin: 0;
+  clear: both;
+  color: $copyright-color;
+  background: $main-grad;
+  background-color: $footer-bg;
+
+  a:hover {
+    color: $footer-link-hover;
+  }
+
+  h5 {
+    padding-top: 2px;
+    padding-right: 10px;
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+footer a,
+footer a:focus {
+  padding: 0 10px;
+  font-size: 1.3em;
+  color: $footer-links;
+}
+
+.social-links {
+  float: left;
+}
+
+.copyright {
+  float: right;
+  cursor: default;
+  user-select: none;
+}
+
+.clearme {
+  clear: both;
+}

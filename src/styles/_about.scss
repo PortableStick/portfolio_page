@@ -1,0 +1,108 @@
+/* -page -- about
+================================ */
+
+#about {
+  height: auto;
+
+  @include min(890) {
+    height: 100vh;
+  }
+
+
+  @include min(900) {
+    padding-top: 12vh;
+  }
+
+
+  .wrapper {
+    border-radius: 5%;
+  }
+
+  #bio {
+    @include min(1400) {
+      padding-top: 6vw;
+    }
+
+
+    p {
+      padding: 5px;
+      font-size: 1.6em;
+      line-height: 150%;
+      color: $about-font-color;
+
+      @include fonts($bio-font);
+
+      @include min(900) {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  .image-wrap {
+    width: 70%;
+    height: auto;
+    padding-bottom: 10px;
+    margin: 5px auto 20px 80px;
+    background-color: $about-image-wrapper;
+
+    @include min(768) {
+      float: left;
+      width: 40%;
+      margin-right: 20px;
+    }
+  }
+}
+
+#portpic {
+  max-width: 500px;
+  padding: 10px 10px 20px;
+  box-shadow: 0 10px 20px -15px $port-pic-border;
+}
+
+a img {
+  max-width: 80%;
+  max-height: 80px;
+}
+
+.web-wrapper {
+  clear: left;
+  background-color: $about-image-wrapper;
+  border-radius: 5%;
+
+  .row {
+    padding: 10px;
+  }
+}
+
+.web {
+  text-align: center;
+
+  img,
+  span {
+    box-shadow: 0 7px 15px -10px $web-border;
+
+    @include min(1200) {
+      box-shadow: none;
+    }
+  }
+
+  &:last-child {
+    padding-top: 6px;
+  }
+}
+
+.expressjs {
+  font-size: 3em;
+
+  > a {
+    text-decoration: none;
+  }
+
+  > a:hover {
+    color: $express-font-color;
+  }
+
+  @include min(1200) {
+    font-size: 4em;
+  }
+}

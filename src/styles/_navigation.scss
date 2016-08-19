@@ -1,0 +1,85 @@
+/* -navigation
+================================ */
+.navbar {
+  h1 {
+    font-size: 2em;
+
+    @include fonts($navbar-font, $navbar-font-weight);
+  }
+}
+
+ul {
+  padding: 0 5%;
+  margin: 0;
+}
+
+.navbar-nav {
+  bottom: 0;
+}
+
+.navbar-default {
+  padding: 0;
+  background-color: transparent;
+  border-bottom: 0;
+
+  .navbar-nav > li > a:hover {
+    color: $nav-hover-color;
+  }
+
+  .navbar-nav > .active > a {
+    background-color: transparent;
+    border-bottom: 2px solid $active-border-bottom;
+  }
+
+  .navbar-brand {
+    color: $brand-color;
+
+    &:hover {
+      color: $brand-hover-color;
+      cursor: default;
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $nav-toggle-border;
+
+    .icon-bar {
+      background-color: $nav-toggle-inner-bars;
+    }
+  }
+}
+
+.navbar-brand {
+  margin: 0 0 10px 0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:visited {
+  font-size: 1.8em;
+  font-variant: bold;
+  color: $nav-links;
+
+  @include fonts($navbar-font, $navbar-font-weight);
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: $active-link-hover;
+  background-color: transparent;
+}
+
+.collapse.in,
+nav .collapsing {
+  background-color: $collapsing-menu-bg;
+  border: 0;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: $nav-toggle-hover-bg;
+}
+
+.inbody {
+  background: $main-grad;
+  background-color: $full-nav-bg;
+}
