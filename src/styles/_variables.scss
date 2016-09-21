@@ -1,7 +1,7 @@
 /* Font delcarations
 ================================ */
-@import url(https://fonts.googleapis.com/css?family=Merriweather|Josefin+Slab:700,600|Comfortaa);
 
+@import url(https://fonts.googleapis.com/css?family=Merriweather|Josefin+Slab:700,600|Comfortaa);
 $merriweather: "Merriweather", serif;
 $josefin: "Josefin Slab", serif;
 $comfortaa: "Comfortaa", sans-serif;
@@ -24,13 +24,13 @@ $description-text-font: $merriweather;
 
 /* Color declarations
 ================================ */
+
 $font-white: #eee;
 $font-black: rgba(0, 0, 0, 0.6);
 $light-green: #eaf9c1;
 $olive-green: #a2ad86;
 $light-grey: #ddd;
 $dark-green: #2f4525;
-
 $deep-blue: #332cff;
 $deep-green: #37850d;
 $deep-orange: #c34714;
@@ -39,14 +39,12 @@ $sandy-orange: #522c17;
 $transparent-black: rgba(25, 25, 25, 0.8);
 $dark-urple: #332327;
 $light-urple: rgba(69, 47, 53, 0.9);
-
 $light-pink: rgba(218, 178, 143, 0.38);
-
 $dark-grey: #5d5d5d;
 $dull-green: #909a54;
 $steelblue: #4682b4;
 
-/*Gradient*/
+/* Gradient */
 
 $main-grad: linear-gradient(to right, $light-urple 0%, $dark-urple 100%);
 $landing-radial-grad: radial-gradient(circle at 0 0, transparentize($light-urple, 0.5) 10%, transparent 100%);
@@ -54,7 +52,7 @@ $landing-radial-grad: radial-gradient(circle at 0 0, transparentize($light-urple
 /* Color assignments
 ================================ */
 
-/*Text*/
+/* Text */
 
 $title-font-color: $font-white;
 $ref-texts: $font-black;
@@ -73,15 +71,13 @@ $carousel-font: $dark-grey;
 $contact-heading: $font-black;
 $form-button-text-hover: $form-button-text;
 $express-font-color: $steelblue;
-
 $linkedin-color: $deep-blue;
 $github-color: $deep-green;
 $fire-color: $deep-orange;
 $description-color: #fff;
-
 $text-shadow: $transparent-black;
 
-/*Borders*/
+/* Borders */
 
 $active-border-bottom: $olive-green;
 $nav-toggle-border: $font-white;
@@ -91,7 +87,7 @@ $port-pic-border: $transparent-black;
 $web-border: transparentize($transparent-black, 0.5);
 $form-box-shadow: transparentize($font-black, 0.3);
 
-/*Backgrounds*/
+/* Backgrounds */
 
 $footer-bg: $dark-orange;
 $form-button-bg: $dark-green;
