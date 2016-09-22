@@ -32,6 +32,26 @@ $(document).ready(function() {
         }
     }());
 
+    let $grid = $('.grid').masonry({
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-sizer',
+          gutter: '.gutter-sizer',
+          percentPosition: false,
+          originTop: false,
+          fitWidth: true,
+          transitionDuration: '0.2s'
+        });
+
+    $grid.on('click','.grid-item', function(event) {
+        if($(this).hasClass('big-item')) {
+            $('.grid-item').removeClass('big-item');
+        } else {
+            $('.grid-item').removeClass('big-item');
+            $(this).addClass('big-item');
+        }
+        $grid.masonry();
+    });
+
     $("#email-form").on('submit', event => {
         event.preventDefault();
         $.post('http://localhost:9000/sendmail',$(event.target).serialize())
