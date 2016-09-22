@@ -1,3 +1,12 @@
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+require('bootstrap');
+$.noConflict(true);
+import toastr from 'toastr';
+import masonry from 'masonry-layout';
+import bridget from 'jquery-bridget';
+bridget('masonry', masonry, $);
+
 $(document).ready(function() {
     'use strict';
 
@@ -23,9 +32,13 @@ $(document).ready(function() {
         }
     }());
 
-    $('.carousel').carousel({
-        pause: 'false'
+    $("#email-form").on('submit', event => {
+        event.preventDefault();
+        $.post('http://localhost:9000/sendmail',$(event.target).serialize())
+            .done(result => {
+                console.log("Sent")
+            }).catch(error => {
+                console.error(error);
+            });
     });
 });
-
-
