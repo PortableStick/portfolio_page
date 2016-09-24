@@ -76,6 +76,19 @@ $github-color: $deep-green;
 $fire-color: $deep-orange;
 $description-color: #fff;
 $text-shadow: $transparent-black;
+$portfolio-item-description-font: $font-white;
+$tech-list-font-color: $font-white;
+$react-text: orange;
+$d3js-text: blue;
+$express-text: purple;
+$nodejs-text: red;
+$rxjs-text: lightblue;
+$mongodb-text: green;
+$mongoose-text: yellow;
+$bootstrap-text: fuchsia;
+$handlebars-text: tomato;
+$toastr-text: steelblue;
+$codemirror-text: #BADA55;
 
 /* Borders */
 
@@ -102,3 +115,5 @@ $form-button-hover-bg: lighten($form-button-bg, 10%);
 $about-image-wrapper: #fff;
 $fa-bg: $transparent-black;
 $description-bg: transparentize($font-black, 0.4);
+$portfolio-item-bg: lighten($dark-urple, 10%);
+$portfolio-item-bg-hover: lighten($portfolio-item-bg, 15%);

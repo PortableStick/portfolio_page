@@ -14,3 +14,17 @@
     @content;
   }
 }
+
+@mixin make-background($id, $url) {
+    ##{$id} {
+        background-image: url($url);
+
+        @extend %tech-background;
+    }
+
+    &.big-item {
+        #{$id} {
+            @extend %big-item-tech-background;
+        }
+    }
+}

@@ -5,86 +5,125 @@
   user-select: none;
 
   @include min(890) {
-    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .grid {
+    padding-top: 20px;
+    margin: 0 auto;
+
+    .gutter-sizer {
+      width: 5px;
+    }
+
+    .grid-sizer,
+    .grid-item {
+      width: 100vw;
+      height: 200px;
+
+      @include min(890) {
+        width: 360px;
+        height: 360px;
+      }
+    }
+
+    .grid-item {
+      float: left;
+      border: 2px solid #333;
+      border-color: hsla(0, 0%, 0%, 0.5);
+      border-radius: 5px;
+      margin-bottom: 5px;
+      padding: 10px auto;
+      color: $portfolio-item-description-font;
+      overflow: hidden;
+      background-color: $portfolio-item-bg;
+
+      $list: gameoflife meteorite-strike-map leaderboard markdown-previewer filesize image-search url-shortener header-parser wikiviewer timestamp recipe-box force-graph twitch-viewer weather-app quote-gen histogram scatterplot heatmap;
+
+      @each $id in $list {
+        @include make-background(#{$id}, "../images/#{$id}.png");
+      }
+
+      &:hover {
+        background-color: $portfolio-item-bg-hover;
+      }
+
+      /* clearfix */
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      a {
+        user-select: none;
+        display: none;
+      }
+
+      p {
+        font-size: 1.2em;
+        display: none;
+        padding: 10px;
+      }
+
+      h3,
+      p,
+      a {
+        user-select: none;
+      }
+
+      .description {
+        padding: 0 10px 8px;
+      }
+
+      .techs {
+        clear: both;
+        display: block;
+        font-style: italic;
+
+        $techs: react d3js express nodejs rxjs mongodb mongoose bootstrap handlebars toastr codemirror jquery;
+
+        @each $tech in $techs {
+          &.#{$tech} {
+
+            &::before {
+              content: '#{$tech}';
+            }
+          }
+        }
+      }
+
+      &.big-item {
+        user-select: none;
+        height: 100vw;
+        width: 100vw;
+
+        @include min(890) {
+          width: 725px;
+          height: 725px;
+        }
+
+        a {
+          display: inline;
+        }
+
+        p {
+          display: inline;
+        }
+      }
+    }
   }
 }
 
-#portfolio .carousel,
-#portfolio .carousel .carousel-inner,
-#portfolio .carousel .carousel-inner .item,
-#portfolio .carousel .carousel-inner .item .empty {
-  height: 100%;
-
-  img {
-    width: 100%;
-    min-height: 50vh;
-  }
-}
-
-.empty {
-  height: auto;
-  text-align: center;
-  background-color: $carousel-bg;
-
-  h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-family: "-open -sans", sans-serif;
-    font-size: 6em;
-    font-weight: 700;
-    color: $carousel-font;
-    transform: translate-x(-50%) translate-y(-50%);
-  }
-}
-
-.description {
-  position: absolute;
-  top: 0;
-  left: 0;
+%tech-background {
   width: 100%;
   height: 100%;
-  padding: 22px 35px;
-  color: $description-color;
-  text-align: center;
-  background-color: $description-bg;
-
-  //border-radius: 15px;
-
-  h3 {
-    font-size: 1.2em;
-
-    @include fonts($description-heading-font, $description-heading-font-wt);
-
-    @include min(500) {
-      margin-top: 36%;
-      font-size: 3.6em;
-    }
-  }
-
-  p {
-    font-size: 1em;
-
-    @include fonts($description-text-font);
-
-    @include min(500) {
-      font-size: 2em;
-    }
-  }
-
-  .description img {
-    @include min(890) {
-      width: 100%;
-      height: 100%;
-    }
-  }
+  background-size: 130% 110%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: all 0.2s;
 }
 
-.carousel-indicators li {
-  background-color: $carousel-indicator-bg;
-  border-color: $carousel-indicator-border;
-
-  &.active {
-    background-color: $carousel-active-bg;
-  }
+%big-item-tech-background {
+  background-size: 120% 80%;
 }

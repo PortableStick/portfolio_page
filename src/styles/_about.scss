@@ -8,11 +8,9 @@
     height: 100vh;
   }
 
-
   @include min(900) {
     padding-top: 12vh;
   }
-
 
   .wrapper {
     border-radius: 5%;
@@ -22,7 +20,6 @@
     @include min(1400) {
       padding-top: 6vw;
     }
-
 
     p {
       padding: 5px;
@@ -51,6 +48,17 @@
       margin-right: 20px;
     }
   }
+
+  .lists {
+    float: left;
+
+    div {
+      width: 40%;
+      display: inline-block;
+      float: left;
+      margin-right: 30px;
+    }
+  }
 }
 
 #portpic {
@@ -64,45 +72,3 @@ a img {
   max-height: 80px;
 }
 
-.web-wrapper {
-  clear: left;
-  background-color: $about-image-wrapper;
-  border-radius: 5%;
-
-  .row {
-    padding: 10px;
-  }
-}
-
-.web {
-  text-align: center;
-
-  img,
-  span {
-    box-shadow: 0 7px 15px -10px $web-border;
-
-    @include min(1200) {
-      box-shadow: none;
-    }
-  }
-
-  &:last-child {
-    padding-top: 6px;
-  }
-}
-
-.expressjs {
-  font-size: 3em;
-
-  > a {
-    text-decoration: none;
-  }
-
-  > a:hover {
-    color: $express-font-color;
-  }
-
-  @include min(1200) {
-    font-size: 4em;
-  }
-}

@@ -56,8 +56,9 @@ $(document).ready(function() {
         event.preventDefault();
         $.post('http://localhost:9000/sendmail',$(event.target).serialize())
             .done(result => {
-                console.log("Sent")
+                toastr.success("Message sent!");
             }).catch(error => {
+                toastr.error("Message could not be sent!");
                 console.error(error);
             });
     });
