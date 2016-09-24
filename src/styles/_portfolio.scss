@@ -38,7 +38,7 @@
       overflow: hidden;
       background-color: $portfolio-item-bg;
 
-      $list: gameoflife meteorite-strike-map leaderboard markdown-previewer filesize image-search url-shortener header-parser wikiviewer timestamp recipe-box force-graph twitch-viewer weather-app quote-gen histogram scatterplot heatmap;
+      $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
       @each $id in $list {
         @include make-background(#{$id}, "../images/#{$id}.png");
@@ -82,15 +82,6 @@
         font-style: italic;
 
         $techs: react d3js express nodejs rxjs mongodb mongoose bootstrap handlebars toastr codemirror jquery;
-
-        @each $tech in $techs {
-          &.#{$tech} {
-
-            &::before {
-              content: '#{$tech}';
-            }
-          }
-        }
       }
 
       &.big-item {

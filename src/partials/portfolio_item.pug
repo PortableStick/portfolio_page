@@ -1,0 +1,12 @@
+.grid-item
+  .description
+    h3= project.title
+    p= project.description
+    .techs
+      for tech, i in project.techs
+        if i < project.techs.length - 1
+          span(id=tech.toLowerCase())= tech + ', '
+        else
+          span(id=tech.toLowerCase())= tech
+    a(href= project.url) Check it out
+  div(id=project.title.toLowerCase().replace(/\s/g, "-"))
