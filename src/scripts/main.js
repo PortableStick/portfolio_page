@@ -7,30 +7,25 @@ import masonry from 'masonry-layout';
 import bridget from 'jquery-bridget';
 bridget('masonry', masonry, $);
 
-$(document).ready(function() {
-    'use strict';
+const topOffset = 50;
 
-    var topOffset = 50;
+function setNavbar() {
+    var loc = $('li.active a').attr('href');
+    if (loc !== '#landing') {
+        $('#main-nav').addClass('inbody');
+    } else {
+        $('#main-nav').removeClass('inbody');
+    }
+}
+
+$(document).ready(function() {
+
+    setNavbar();
 
     $('body').scrollspy({
         target: '#main-nav',
         offset: topOffset
-    }).on('activate.bs.scrollspy', function() {
-        var loc = $('#main-nav').find('li.active a').attr('href');
-        if (loc !== '#landing') {
-            $('#main-nav').addClass('inbody');
-        } else {
-            $('#main-nav').removeClass('inbody');
-        }
-    });
-    ( function() {
-        var loc = $('#main-nav').find('li.active a').attr('href');
-        if (loc !== '#landing') {
-            $('#main-nav').addClass('inbody');
-        } else {
-            $('#main-nav').removeClass('inbody');
-        }
-    }());
+    }).on('activate.bs.scrollspy', setNavbar);
 
     let $grid = $('.grid').masonry({
           itemSelector: '.grid-item',
@@ -61,5 +56,9 @@ $(document).ready(function() {
                 toastr.error("Message could not be sent!");
                 console.error(error);
             });
+    });
+
+    $('.navbar-nav').on('click', () => {
+        $('#collapse.in').collapse('hide');
     });
 });
