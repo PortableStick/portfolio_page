@@ -1,5 +1,3 @@
-/* -page - -portfolio
-================================ */
 #portfolio {
   min-height: 50vh;
   user-select: none;
@@ -81,7 +79,24 @@
         display: block;
         font-style: italic;
 
-        $techs: react d3js express nodejs rxjs mongodb mongoose bootstrap handlebars toastr codemirror jquery;
+        $techs: (react: $react-text,
+           d3js: $d3js-text,
+           expressjs: $expressjs-text,
+           nodejs: $nodejs-text,
+           rxjs: $rxjs-text,
+           mongodb: $mongodb-text,
+           mongoose: $mongoose-text,
+           bootstrap: $bootstrap-text,
+           handlebars: $handlebars-text,
+           toastr: $toastr-text,
+           codemirror: $codemirror-text,
+           jquery: $jquery-text);
+
+        @each $tech, $color in $techs {
+          span.#{$tech} {
+            color: $color;
+          }
+        }
       }
 
       &.big-item {
