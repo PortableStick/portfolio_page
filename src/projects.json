@@ -3,108 +3,108 @@
       "title": "Heatmap",
       "description": "A heatmap made in D3js displaying variations in global temperatures over time.",
       "techs": ["D3js"],
-      "url": "#"
+      "url": "/heatmap"
       },
     {
       "title": "Scatterplot",
       "description": "A couple of scatterplots made in D3js that show the top grossing movings and the highest return on investment per genre.",
       "techs": ["D3js"],
-      "url": "#"
+      "url": "/scatterplot"
       },
     {
       "title": "Histogram",
       "description": "A chart made in D3js showing the difference between the increase in productivity versus the increase in wages over the last 50 years.",
       "techs": ["D3js"],
-      "url": "#"
+      "url": "/histogram"
       },
     {
       "title": "Quote Generator",
       "description": "Press the button to get a new quote selected randomly from a treasure chest of wisdom!",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "#"
+      "url": "/quote-generator"
       },
     {
       "title": "Forecast App",
       "description": "Get the weather in your location, along with a 7 day forecast.",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "#"
+      "url": "/forecast-app"
       },
     {
       "title": "TwitchTV Viewer",
       "description": "Monitor the current online state of your favorite Twitch.tv streamers. Combines observable streams from various sources.",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "#"
+      "url": "/twitchtv-viewer"
       },
     {
       "title": "Force Directed Graph",
       "description": "A semi-interactive, force-directed graph made in D3js showing the countries of the world as connected by land borders",
       "techs": ["D3js"],
-      "url": "#"
+      "url": "/force-directed-graph"
       },
     {
       "title": "Recipe Box",
       "description": "Create and view recipes.  Store them in your browser!",
       "techs": ["React", "Redux", "Bootstrap", "jQuery"],
-      "url": "#"
+      "url": "/recipe-box"
       },
     {
       "title": "Wikipedia Viewer",
       "description": "Search Wikipedia and get links to articles. A simple application of observable streams.",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "#"
+      "url": "/wikipedia-viewer"
       },
     {
       "title": "Timestamp Microservice",
       "description": "A simple API that transforms natural language time strings into Unix epoch format, and visa-versa.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "#"
+      "url": "http://api.mysupertestsite.com:8080/time"
       },
     {
       "title": "Request Header Parser",
       "description": "Send a GET request to receive request header metadata in JSON format.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "#"
+      "url": "http://api.mysupertestsite.com:8080/header"
       },
     {
       "title": "URL Shortener",
       "description": "Send a URL to receive a unique, shortened link. Send the link to be sent to the original location.",
       "techs": ["NodeJS", "ExpressJS", "MongoDB", "Mongoose"],
-      "url": "#"
+      "url": "http://api.mysupertestsite.com:8080/short"
       },
     {
       "title": "File Metadata Microservice",
       "description": "Upload a file to receive the filesize.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "#"
+      "url": "http://api.mysupertestsite.com:8080/file"
       },
     {
       "title": "Markdown Previewer",
       "description": "Write in Github-flavored Markdown and see a real time preview of the result. Includes syntax highlighting!",
       "techs": ["React", "jQuery", "Bootstrap"],
-      "url": "#"
+      "url": "/markdown-previewer"
       },
     {
       "title": "Image Search Abstraction Layer",
       "description": "An API that abstracts Flickr searchers into more terse GET requests.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "#"
+      "url": "http://api.mysupertestsite.com:8080/image"
       },
     {
       "title": "freeCodeCamp Leaderboard",
       "description": "See who's leading the freeCodeCamp community in points, either by completing challenges or helping out in the chat!",
       "techs": ["React", "jQuery", "Bootstrap"],
-      "url": "#"
+      "url": "/freecodecamp-leaderboard"
       },
     {
       "title": "Game of Life",
       "description": "An implementation of Conway's Game of Life.",
       "techs": ["React", "jQuery", "Bootstrap"],
-      "url": "#"
+      "url": "/game-of-life"
       },
     {
       "title": "Meteorite Strike Map",
       "description": "A map of meteorite strikes around the world, with their imapct sizes visualized.",
       "techs": ["D3js"],
-      "url": "#"
+      "url": "/meteorite-strike-map"
       }]
 }

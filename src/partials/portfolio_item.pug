@@ -8,5 +8,5 @@
           span(class=tech.toLowerCase())= tech + ', '
         else
           span(class=tech.toLowerCase())= tech
-    a(href= project.url) Check it out
+    a(href= project.url, target="_blank") Check it out
   div(id=project.title.toLowerCase().replace(/\s/g, "-"))
