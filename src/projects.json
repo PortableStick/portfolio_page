@@ -3,19 +3,19 @@
       "title": "Heatmap",
       "description": "A heatmap made in D3js displaying variations in global temperatures over time.",
       "techs": ["D3js"],
-      "url": "/heatmap"
+      "url": "http://codepen.io/PortableStick/pen/ZOQLgM"
       },
     {
       "title": "Scatterplot",
       "description": "A couple of scatterplots made in D3js that show the top grossing movings and the highest return on investment per genre.",
       "techs": ["D3js"],
-      "url": "/scatterplot"
+      "url": "http://codepen.io/PortableStick/pen/mEJKPa"
       },
     {
       "title": "Histogram",
       "description": "A chart made in D3js showing the difference between the increase in productivity versus the increase in wages over the last 50 years.",
       "techs": ["D3js"],
-      "url": "/histogram"
+      "url": "http://codepen.io/PortableStick/pen/jqgxYB"
       },
     {
       "title": "Quote Generator",
@@ -39,7 +39,7 @@
       "title": "Force Directed Graph",
       "description": "A semi-interactive, force-directed graph made in D3js showing the countries of the world as connected by land borders",
       "techs": ["D3js"],
-      "url": "/force-directed-graph"
+      "url": "http://codepen.io/PortableStick/pen/ZOWgRq"
       },
     {
       "title": "Recipe Box",
@@ -105,6 +105,6 @@
       "title": "Meteorite Strike Map",
       "description": "A map of meteorite strikes around the world, with their imapct sizes visualized.",
       "techs": ["D3js"],
-      "url": "/meteorite-strike-map"
+      "url": "http://codepen.io/PortableStick/pen/NAOgxP"
       }]
 }
