@@ -10,7 +10,9 @@ bridget('masonry', masonry, $);
 const topOffset = 50;
 
 function setNavbar() {
+    console.log("Checking for active link");
     var loc = $('li.active a').attr('href');
+    console.log("loc is ", loc);
     if (loc !== '#landing') {
         $('#main-nav').addClass('inbody');
     } else {
@@ -19,8 +21,6 @@ function setNavbar() {
 }
 
 $(document).ready(function() {
-
-    setNavbar();
 
     $('body').scrollspy({
         target: '#main-nav',
@@ -37,7 +37,10 @@ $(document).ready(function() {
           transitionDuration: '0.2s'
         });
 
-    $grid.on('click','.grid-item', function(event) {
+    $('.grid-item').on('click', function(event) {
+        if($(event.target).is('a.project-link')) {
+            return;
+        }
         if($(this).hasClass('big-item')) {
             $('.grid-item').removeClass('big-item');
         } else {
@@ -61,4 +64,6 @@ $(document).ready(function() {
     $('.navbar-nav').on('click', () => {
         $('#collapse.in').collapse('hide');
     });
+
+    setNavbar();
 });

@@ -45,7 +45,8 @@
     "build": "npm run cleanup && npm run setupfolder && npm run build:vendor && npm run build:html && npm run build:scripts && npm run build:styles && npm run build:images",
     "start": "npm run build && run-p watch:* -s server",
     "start:testing": "npm test && npm run test:watch -s",
-    "stage": "fly"
+    "stage": "fly staging:staging",
+    "production": "fly production:production"
   },
   "name": "portfolio_page",
   "version": "1.0.0",
