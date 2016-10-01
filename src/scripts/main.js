@@ -7,18 +7,23 @@ import masonry from 'masonry-layout';
 import bridget from 'jquery-bridget';
 bridget('masonry', masonry, $);
 
-const topOffset = 50;
+const topOffset = 50,
+    currentYear = new Date(Date.now()).getFullYear();
 
 function setNavbar() {
     var loc = $('li.active a').attr('href');
     if (loc !== '#landing') {
         $('#main-nav').addClass('inbody');
+        $('footer').show();
     } else {
         $('#main-nav').removeClass('inbody');
+        $('footer').hide();
     }
 }
 
 $(document).ready(function() {
+
+    $('.current-year').html(` ${currentYear} `);
 
     $('body').scrollspy({
         target: '#main-nav',
