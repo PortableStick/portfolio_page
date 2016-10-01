@@ -2,17 +2,26 @@
     h2 Contact me
     form#email-form.form-horizontal(name='email-form')
       .form-group.form-group-lg
-        label.col-xs-3(for='name') Name:
+        label.col-xs-3(for='name')
+         span.hidden-xs Name:
+         span.visible-xs
+          i.fa.fa-user
         .col-xs-9
           input#name.form-control(name='name', placeholder='Your name', type='text')
       .form-group.form-group-lg
-        label.col-xs-3(for='email') Email:
+        label.col-xs-3(for='email')
+         span.hidden-xs Email:
+         span.visible-xs
+          i.fa.fa-envelope
         .col-xs-9
           input#email.form-control(name='email', placeholder='your@email.com', type='email')
       .form-group.form-group-lg
-        label.col-xs-3(for='message') Message:
+        label.col-xs-3(for='message')
+         span.hidden-xs Message:
+         span.visible-xs
+          i.fa.fa-comment
         .col-xs-9
           textarea#message.form-control(name='message', placeholder='Hello, handsome!')
       .form-group
-        .col-xs-offset-3.col-xs-9
+        .col-xs-offset-9.col-xs-3.col-sm-offset-3.col-sm-3
           button#send-button.btn.btn-default.btn-lg Send

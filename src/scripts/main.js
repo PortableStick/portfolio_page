@@ -71,7 +71,8 @@ $(document).ready(function() {
     $('.sort-buttons .btn').click((event) => {
         const $target = $(event.target),
          $targetClass = $(event.target).html().toLowerCase(),
-         $gridItems = $('.grid-item');
+         $gridItems = $('.grid-item'),
+         $sortButtons = $('.sort-buttons .btn');
 
         $gridItems.removeClass('big-item');
 
@@ -80,9 +81,10 @@ $(document).ready(function() {
                 $gridItems.css('display', 'inline-block');
                 $grid.masonry();
                 $gridItems.fadeIn(500);
-                $('.sort-buttons .btn').removeClass('active');
+                $sortButtons.removeClass('active');
             });
          } else {
+            $sortButtons.removeClass('active');
             $gridItems.fadeOut(500).promise().done(() => {
                 let $targetGridItems = $gridItems.filter((idx, target) => {
                     return $(target).find('span').hasClass($targetClass);

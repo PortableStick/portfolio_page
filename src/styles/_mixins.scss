@@ -15,6 +15,12 @@
   }
 }
 
+@mixin between($min, $max) {
+  @media (min-width: $min + "px") and (max-width: $max + "px") {
+    @content;
+  }
+}
+
 @mixin make-background($id, $url) {
     ##{$id} {
         background-image: url($url);
