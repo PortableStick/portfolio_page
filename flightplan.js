@@ -1,9 +1,11 @@
 var plan = require('flightplan');
+var appName = "portfolio-page";
 
 plan.target('setup', {
     host: "mysupertestsite.com",
     username: "gregorysmith",
-    agent: process.env.SSH_AUTH_SOCK
+    agent: process.env.SSH_AUTH_SOCK,
+    webRoot: "/usr/local/var"
 });
 
 plan.target('staging', {
@@ -29,10 +31,9 @@ plan.target('deployment', {
 var versionedDir = `${new Date().getTime()}`;
 
 plan.remote('setup', function(remote) {
-    remote.with('cd /usr/local/var', function() {
-        remote.mkdir('portfolio-page');
-        remote.mkdir('~/portfolio-page')
-    });
+        // remote.mkdir('apps');
+        remote.mkdir(`/usr/local/var/${appName}`);
+        remote.mkdir(`~/${appName}`);
 });
 
 plan.local(['staging', 'deployment'], function(local) {
@@ -49,17 +50,17 @@ plan.local(['staging', 'deployment'], function(local) {
                     });
     local.log("Moving files");
     local.with(`cd dist`, function() {
-        local.transfer(filesToTransfer, `~/portfolio-page`);
+        local.transfer(filesToTransfer, `~/${appName}`);
     });
 });
 
 plan.remote(['staging', 'deployment'], function(remote) {
     remote.hostname();
-    remote.log("Remoting!");
-    remote.exec(`cp -R ~/portfolio-page ${plan.runtime.options.webRoot}/portfolio-page/${versionedDir}`)
-    remote.exec(`chown -R ${plan.runtime.options.ownerUser}:${plan.runtime.options.group} ${plan.runtime.options.webRoot}/portfolio-page/${versionedDir}`);
-    remote.with(`cd ${plan.runtime.options.webRoot}/portfolio-page`, function() {
-        remote.exec('rm current');
-        remote.exec(`ln -s ${versionedDir} current`);
+    remote.log("Remoting in...");
+    remote.exec(`cp -R ~/${appName} ${plan.runtime.options.webRoot}/${appName}/${versionedDir}`)
+    remote.exec(`chown -R ${plan.runtime.options.ownerUser}:${plan.runtime.options.group} ${plan.runtime.options.webRoot}/${appName}/${versionedDir}`);
+    remote.with(`cd ${plan.runtime.options.webRoot}/apps`, function() {
+        remote.log("Linking")
+        remote.exec(`ln -sf ../${appName}/${versionedDir} ${appName}`);
     });
 });

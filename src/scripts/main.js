@@ -10,9 +10,7 @@ bridget('masonry', masonry, $);
 const topOffset = 50;
 
 function setNavbar() {
-    console.log("Checking for active link");
     var loc = $('li.active a').attr('href');
-    console.log("loc is ", loc);
     if (loc !== '#landing') {
         $('#main-nav').addClass('inbody');
     } else {
@@ -30,9 +28,9 @@ $(document).ready(function() {
     let $grid = $('.grid').masonry({
           itemSelector: '.grid-item',
           columnWidth: '.grid-sizer',
-          gutter: '.gutter-sizer',
+          gutter: 15,
           percentPosition: false,
-          originTop: false,
+          originTop: true,
           fitWidth: true,
           transitionDuration: '0.2s'
         });
@@ -63,6 +61,32 @@ $(document).ready(function() {
 
     $('.navbar-nav').on('click', () => {
         $('#collapse.in').collapse('hide');
+    });
+
+    $('.sort-buttons .btn').click((event) => {
+        const $target = $(event.target),
+         $targetClass = $(event.target).html().toLowerCase(),
+         $gridItems = $('.grid-item');
+
+        $gridItems.removeClass('big-item');
+
+         if($target.hasClass('active')) {
+            $gridItems.fadeOut(500).promise().done(() => {
+                $gridItems.css('display', 'inline-block');
+                $grid.masonry();
+                $gridItems.fadeIn(500);
+                $('.sort-buttons .btn').removeClass('active');
+            });
+         } else {
+            $gridItems.fadeOut(500).promise().done(() => {
+                let $targetGridItems = $gridItems.filter((idx, target) => {
+                    return $(target).find('span').hasClass($targetClass);
+                }).css('display', 'inline-block');
+                $grid.masonry();
+                $targetGridItems.fadeIn(500);
+                $target.addClass('active');
+            });
+         }
     });
 
     setNavbar();

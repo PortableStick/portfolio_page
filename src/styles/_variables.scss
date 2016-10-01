@@ -48,6 +48,7 @@ $steelblue: #4682b4;
 
 $main-grad: linear-gradient(to right, $light-urple 0%, $dark-urple 100%);
 $landing-radial-grad: radial-gradient(circle at 0 0, transparentize($light-urple, 0.5) 10%, transparent 100%);
+$grid-item-grad: linear-gradient(to bottom,rgba(125, 185, 232, 1) 0%, rgba(41, 137, 216, 0.84) 52%, rgba(125, 185, 232, 1) 99%, rgba(125, 185, 232, 1) 100%);
 
 /* Color assignments
 ================================ */
@@ -79,19 +80,6 @@ $text-shadow: $transparent-black;
 $portfolio-item-description-font: $font-white;
 $tech-list-font-color: $font-white;
 
-$react-text: orange;
-$d3js-text: blue;
-$expressjs-text: purple;
-$nodejs-text: red;
-$rxjs-text: lightblue;
-$mongodb-text: green;
-$mongoose-text: yellow;
-$bootstrap-text: fuchsia;
-$handlebars-text: tomato;
-$toastr-text: steelblue;
-$codemirror-text: #BADA55;
-$jquery-text: pink;
-
 /* Borders */
 
 $active-border-bottom: $olive-green;
@@ -101,6 +89,7 @@ $carousel-indicator-border: $dark-grey;
 $port-pic-border: $transparent-black;
 $web-border: transparentize($transparent-black, 0.5);
 $form-box-shadow: transparentize($font-black, 0.3);
+$grid-item-border-color: $transparent-black;
 
 /* Backgrounds */
 
@@ -119,3 +108,7 @@ $fa-bg: $transparent-black;
 $description-bg: transparentize($font-black, 0.4);
 $portfolio-item-bg: lighten($dark-urple, 10%);
 $portfolio-item-bg-hover: lighten($portfolio-item-bg, 15%);
+$sort-button-bg: $dark-grey;
+$sort-button-bg-hover: lighten($sort-button-bg, 15%);
+
+$sort-button-box-shadow: rgba(235, 235, 235, 0.6);

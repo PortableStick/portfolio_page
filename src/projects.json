@@ -1,4 +1,5 @@
 {
+  "techs":["D3js","RxJS", "jQuery", "Bootstrap", "Handlebars","React", "Redux", "NodeJS", "ExpressJS", "MongoDB", "Mongoose"],
   "projects":  [{
       "title": "Heatmap",
       "description": "A heatmap made in D3js displaying variations in global temperatures over time.",

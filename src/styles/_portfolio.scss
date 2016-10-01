@@ -1,6 +1,27 @@
 #portfolio {
   min-height: 50vh;
   user-select: none;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .sort-buttons {
+    margin: 0 auto;
+    text-align: center;
+
+    .btn {
+      margin-top: 5px;
+      background-color: $sort-button-bg;
+      box-shadow: inset 0 0 9px 2px $sort-button-box-shadow;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        background-color: $sort-button-bg-hover;
+      }
+    }
+  }
 
   @include min(890) {
     min-height: 100vh;
@@ -10,13 +31,9 @@
     padding-top: 20px;
     margin: 0 auto;
 
-    .gutter-sizer {
-      width: 5px;
-    }
-
     .grid-sizer,
     .grid-item {
-      width: 100vw;
+      width: 95vw;
       height: 200px;
 
       @include min(890) {
@@ -27,14 +44,15 @@
 
     .grid-item {
       float: left;
-      border: 2px solid #333;
-      border-color: hsla(0, 0%, 0%, 0.5);
+      border: 2px solid;
+      border-color: $grid-item-border-color;
       border-radius: 5px;
       margin-bottom: 5px;
       padding: 10px auto;
       color: $portfolio-item-description-font;
       overflow: hidden;
-      background-color: $portfolio-item-bg;
+      background-image: $grid-item-grad;
+      // background-color: $portfolio-item-bg;
 
       $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
@@ -64,6 +82,11 @@
         padding: 10px;
       }
 
+      h3 {
+        margin: 0;
+        font-size: 1.6em;
+      }
+
       h3,
       p,
       a {
@@ -71,7 +94,7 @@
       }
 
       .description {
-        padding: 0 10px 8px;
+        padding: 10px 10px 8px;
       }
 
       .techs {
@@ -79,30 +102,15 @@
         display: block;
         font-style: italic;
 
-        $techs: (react: $react-text,
-           d3js: $d3js-text,
-           expressjs: $expressjs-text,
-           nodejs: $nodejs-text,
-           rxjs: $rxjs-text,
-           mongodb: $mongodb-text,
-           mongoose: $mongoose-text,
-           bootstrap: $bootstrap-text,
-           handlebars: $handlebars-text,
-           toastr: $toastr-text,
-           codemirror: $codemirror-text,
-           jquery: $jquery-text);
-
-        @each $tech, $color in $techs {
-          span.#{$tech} {
-            color: $color;
-          }
+        span {
+          color: $tech-list-font-color;
         }
       }
 
       &.big-item {
         user-select: none;
         height: 100vw;
-        width: 100vw;
+        width: 95vw;
 
         @include min(890) {
           width: 725px;
@@ -116,6 +124,11 @@
         p {
           display: inline;
         }
+      }
+
+      @include min(890) {
+        box-shadow: 6px 5px 8px -3px #666;
+        margin-bottom: 18px;
       }
     }
   }

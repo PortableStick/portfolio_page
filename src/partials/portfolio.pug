@@ -1,7 +1,9 @@
 #portfolio.container-fluid.page
+    .sort-buttons
+        for tech in techs
+            include tech_button
     .grid
       .grid-sizer
-      .gutter-sizer
       for project in projects
         include portfolio_item
 
