@@ -2,9 +2,12 @@
 ================================ */
 #contact {
   overflow-x: hidden;
+  background-color: $contact-bg;
+  padding-bottom: 60px;
 
   @include min(890) {
-    margin-top: 240px;
+    padding-top: 200px;
+    padding-bottom: 80px;
   }
 
   h2 {
@@ -19,12 +22,8 @@
     }
   }
 
-  @include max(890) {
-    padding-bottom: 20px;
-  }
-
   @include min(890) {
-    height: 90vh;
+    height: 95vh;
   }
 }
 

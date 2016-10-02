@@ -12,7 +12,7 @@ a:focus {
   padding: 0;
   overflow-x: hidden;
 
-  /*fixes right gap on ios devices*/
+  /* fixes right gap on ios devices */
 }
 
 .tmpclear {
@@ -42,5 +42,10 @@ body {
 /* -make sure pages clear each other
 ================================ */
 .page {
+  clear: both;
+}
+
+.clearme {
+  content: '';
   clear: both;
 }

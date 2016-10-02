@@ -3,6 +3,7 @@
   user-select: none;
   padding-left: 5px;
   padding-right: 5px;
+  background-color: $portfolio-bg;
 
   .sort-buttons {
     margin: 0 auto;
@@ -11,7 +12,7 @@
     .btn {
       margin-top: 5px;
       background-color: $sort-button-bg;
-      box-shadow: inset 0 0 9px 2px $sort-button-box-shadow;
+      box-shadow: $sort-button-box-shadow-inset;
 
       &:not(:last-child) {
         margin-right: 8px;
@@ -22,7 +23,7 @@
       }
 
       @include min(890) {
-        box-shadow: inset 0 0 9px 2px $sort-button-box-shadow, 3px 3px 6px -2px #aaa;
+        box-shadow: $sort-button-box-shadow-inset, 3px 3px 6px -2px #aaa;
       }
     }
   }
@@ -47,15 +48,13 @@
 
     .grid-item {
       float: left;
-      border: 2px solid;
+      border: 1px solid;
       border-color: $grid-item-border-color;
       border-radius: 5px;
       margin-bottom: 5px;
       padding: 10px auto;
       color: $portfolio-item-description-font;
       overflow: hidden;
-      background-image: $grid-item-grad;
-      background-color: $portfolio-item-bg;
 
       $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
@@ -64,7 +63,7 @@
       }
 
       &:hover {
-        background-color: $portfolio-item-bg-hover;
+        background-image: $grid-item-hover-grad;
       }
 
       /* clearfix */
@@ -80,14 +79,23 @@
       }
 
       p {
-        font-size: 1.2em;
+        font-size: 1em;
         display: none;
         padding: 10px;
+
+        @include min(768) {
+          font-size: 1.2em;
+        }
       }
 
       h3 {
         margin: 0;
-        font-size: 1.6em;
+        font-size: 1.2em;
+        color: $grid-item-title-color;
+
+        @include min(768) {
+          font-size: 1.6em;
+        }
       }
 
       h3,
@@ -97,13 +105,23 @@
       }
 
       .description {
-        padding: 10px 10px 8px;
+        padding: 10px 10px 0;
+        background-image: $grid-item-mobile-image;
+        background-color: $portfolio-item-bg;
+        height: 100%;
+
+        @include min(768) {
+        background-image: $grid-item-grad;
+          height: auto;
+        }
       }
 
       .techs {
         clear: both;
         display: block;
         font-style: italic;
+        margin: 3px auto 0;
+        padding-bottom: 5px;
 
         span {
           color: $tech-list-font-color;
@@ -113,10 +131,11 @@
       &.big-item {
         user-select: none;
         height: auto;
+        text-align: center;
 
         @include min(768) {
-          width: 725px;
-          height: 725px;
+          width: 735px;
+          height: 740px;
         }
 
         a {
@@ -125,6 +144,46 @@
 
         p {
           display: inline;
+        }
+
+        .techs {
+          &::before {
+            content: "Uses ";
+          }
+        }
+
+        .project-links-bar {
+          background-color: $project-links-background-color;
+          margin-left: 0;
+          margin-bottom: 0;
+          width: 100%;
+
+          @include min(768) {
+            position: absolute;
+            top: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+
+          .project-link,
+          .github-link {
+            color: $check-it-out;
+            font-size: 1em;
+            background-color: $project-link-button-background-color;
+            box-shadow: $project-link-button-box-shadow-inset, 6px 6px 7px -3px rgba(85, 85, 85, .7);
+
+            &:hover {
+              background-color: $project-link-button-background-color-hover;
+            }
+
+            @include min(768) {
+              font-size: 1.2em;
+            }
+          }
+        }
+
+        &:hover .project-links-bar {
+          opacity: 1;
         }
       }
 
@@ -139,10 +198,21 @@
 %tech-background {
   width: 100%;
   height: 100%;
-  background-size: 130% 110%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
   transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include min(768) {
+    position: relative;
+  }
 }
 
 %big-item-tech-background {

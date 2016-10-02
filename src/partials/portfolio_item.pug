@@ -8,5 +8,7 @@
           span(class=tech.toLowerCase())= tech + ', '
         else
           span(class=tech.toLowerCase())= tech
-    a(href= project.url, target="_blank", class="project-link") Check it out
+    .project-links-bar.row
+      a.btn.btn-lg.col-xs-6.col-md-4.col-md-offset-1(href= project.url, target="_blank", class="project-link") Check it out
+      a.btn.btn-lg.col-xs-6.col-md-4.col-md-offset-2(href= project.github, target="_blank", class="github-link") #[i.fa.fa-github] GitHub
   div(id=project.title.toLowerCase().replace(/\s/g, "-"))

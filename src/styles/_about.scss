@@ -3,6 +3,7 @@
 
 #about {
   height: auto;
+  background-color: $about-bg;
 
   @include min(890) {
     height: 100vh;
