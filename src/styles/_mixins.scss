@@ -23,14 +23,19 @@
 
 @mixin make-background($id, $url) {
     ##{$id} {
+      @include min(768) {
         background-image: url($url);
+      }
 
         @extend %tech-background;
     }
 
     &.big-item {
         #{$id} {
-            @extend %big-item-tech-background;
+          @include min(768) {
+            background-image: url($url);
+          }
+          @extend %big-item-tech-background;
         }
     }
 }
