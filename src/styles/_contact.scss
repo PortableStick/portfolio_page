@@ -1,5 +1,3 @@
-/* -page contact
-================================ */
 #contact {
   overflow-x: hidden;
   background-color: $contact-bg;
@@ -26,7 +24,6 @@
     height: 95vh;
   }
 
-
   form {
     padding-top: 10px;
     padding-right: 10px;
@@ -45,7 +42,7 @@
     }
 
     label {
-      padding: 10px 0;
+      padding: 10px 10px 10px 0;
       font-size: 1.2em;
       color: $form-text;
       text-align: right;

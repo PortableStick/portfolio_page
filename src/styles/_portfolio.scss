@@ -38,7 +38,6 @@
 
     .sort-item {
       font-size: 1em;
-      color: $sort-btn;
       padding: 2px;
       margin: 4px 0;
 
@@ -52,8 +51,13 @@
         background-color: $sort-btn-hover-bg;
       }
 
-      p {
+      a {
         margin: 0;
+        color: $sort-btn;
+
+        &:hover {
+          color: $sort-btn;
+        }
       }
 
       @include min(768) {
