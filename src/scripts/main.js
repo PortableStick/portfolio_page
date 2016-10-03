@@ -48,8 +48,8 @@ $(document).ready(() => {
           transitionDuration: '0.2s'
         });
 
-    $gridItems.on('click', event => {
-        if($(event.target).is('a.project-link')) {
+    $gridItems.on('click', function(event) {
+        if($(event.target).is('a.project-link') || $(event.target).is('a.github-link')) {
             return;
         }
         if($(this).hasClass('big-item')) {

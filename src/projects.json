@@ -4,108 +4,126 @@
       "title": "Heatmap",
       "description": "A heatmap made in D3js displaying variations in global temperatures over time.",
       "techs": ["D3js"],
-      "url": "http://codepen.io/PortableStick/pen/ZOQLgM"
+      "url": "http://codepen.io/PortableStick/pen/ZOQLgM",
+      "github": "https://github.com/PortableStick/d3HeatMap"
       },
     {
       "title": "Scatterplot",
       "description": "A couple of scatterplots made in D3js that show the top grossing movings and the highest return on investment per genre.",
       "techs": ["D3js"],
-      "url": "http://codepen.io/PortableStick/pen/mEJKPa"
+      "url": "http://codepen.io/PortableStick/pen/mEJKPa",
+      "github": "https://github.com/PortableStick/d3ScatterPlot"
       },
     {
       "title": "Histogram",
       "description": "A chart made in D3js showing the difference between the increase in productivity versus the increase in wages over the last 50 years.",
       "techs": ["D3js"],
-      "url": "http://codepen.io/PortableStick/pen/jqgxYB"
+      "url": "http://codepen.io/PortableStick/pen/jqgxYB",
+      "github": "https://github.com/PortableStick/d3histogram"
       },
     {
       "title": "Quote Generator",
       "description": "Press the button to get a new quote selected randomly from a treasure chest of wisdom!",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "/quote-generator"
+      "url": "/quote-generator",
+      "github": "https://github.com/PortableStick/quoteviewer"
       },
     {
       "title": "Forecast App",
       "description": "Get the weather in your location, along with a 7 day forecast.",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "/forecast-app"
+      "url": "/forecast-app",
+      "github": "https://github.com/PortableStick/weatherviewer"
       },
     {
       "title": "TwitchTV Viewer",
       "description": "Monitor the current online state of your favorite Twitch.tv streamers. Combines observable streams from various sources.",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "/twitchtv-viewer"
+      "url": "/twitchtv-viewer",
+      "github": "https://github.com/PortableStick/twitchtvapp"
       },
     {
       "title": "Force Directed Graph",
       "description": "A semi-interactive, force-directed graph made in D3js showing the countries of the world as connected by land borders",
       "techs": ["D3js"],
-      "url": "http://codepen.io/PortableStick/pen/ZOWgRq"
+      "url": "http://codepen.io/PortableStick/pen/ZOWgRq",
+      "github": "https://github.com/PortableStick/forcegraph"
       },
     {
       "title": "Recipe Box",
       "description": "Create and view recipes.  Store them in your browser!",
       "techs": ["React", "Redux", "Bootstrap", "jQuery"],
-      "url": "/recipe-box"
+      "url": "/recipe-box",
+      "github": "https://github.com/PortableStick/recipe-box"
       },
     {
       "title": "Wikipedia Viewer",
       "description": "Search Wikipedia and get links to articles. A simple application of observable streams.",
       "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
-      "url": "/wikipedia-viewer"
+      "url": "/wikipedia-viewer",
+      "github": "https://github.com/PortableStick/wikiviewer"
       },
     {
       "title": "Timestamp Microservice",
       "description": "A simple API that transforms natural language time strings into Unix epoch format, and visa-versa.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/time"
+      "url": "http://api.mysupertestsite.com:8080/time",
+      "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "Request Header Parser",
       "description": "Send a GET request to receive request header metadata in JSON format.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/header"
+      "url": "http://api.mysupertestsite.com:8080/header",
+      "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "URL Shortener",
       "description": "Send a URL to receive a unique, shortened link. Send the link to be sent to the original location.",
       "techs": ["NodeJS", "ExpressJS", "MongoDB", "Mongoose"],
-      "url": "http://api.mysupertestsite.com:8080/short"
+      "url": "http://api.mysupertestsite.com:8080/short",
+      "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "File Metadata Microservice",
       "description": "Upload a file to receive the filesize.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/file"
+      "url": "http://api.mysupertestsite.com:8080/file",
+      "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "Markdown Previewer",
       "description": "Write in Github-flavored Markdown and see a real time preview of the result. Includes syntax highlighting!",
       "techs": ["React", "jQuery", "Bootstrap"],
-      "url": "/markdown-previewer"
+      "url": "/markdown-previewer",
+      "github": "https://github.com/PortableStick/markdown-previewer"
       },
     {
       "title": "Image Search Abstraction Layer",
       "description": "An API that abstracts Flickr searchers into more terse GET requests.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/image"
+      "url": "http://api.mysupertestsite.com:8080/image",
+      "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "freeCodeCamp Leaderboard",
       "description": "See who's leading the freeCodeCamp community in points, either by completing challenges or helping out in the chat!",
       "techs": ["React", "jQuery", "Bootstrap"],
-      "url": "/freecodecamp-leaderboard"
+      "url": "/freecodecamp-leaderboard",
+      "github": "https://github.com/PortableStick/fcc-leaderboard"
       },
     {
       "title": "Game of Life",
       "description": "An implementation of Conway's Game of Life.",
       "techs": ["React", "jQuery", "Bootstrap"],
-      "url": "/game-of-life"
+      "url": "/game-of-life",
+      "github": "https://github.com/PortableStick/gameOfLife"
       },
     {
       "title": "Meteorite Strike Map",
       "description": "A map of meteorite strikes around the world, with their imapct sizes visualized.",
       "techs": ["D3js"],
-      "url": "http://codepen.io/PortableStick/pen/NAOgxP"
+      "url": "http://codepen.io/PortableStick/pen/NAOgxP",
+      "github": "https://github.com/PortableStick/meteorstrikemap"
       }]
 }
