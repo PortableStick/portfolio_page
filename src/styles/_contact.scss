@@ -25,111 +25,112 @@
   @include min(890) {
     height: 95vh;
   }
-}
 
-form {
-  padding-top: 10px;
-  padding-right: 10px;
-  margin-bottom: 20px;
 
-  @include min(760) {
-    padding-top: 20px;
-  }
-
-  @include min(900) {
-    margin-bottom: 0;
-
-    .btn-lg {
-      font-size: 2.5em;
-    }
-  }
-
-  label {
-    padding: 10px 0;
-    font-size: 1.2em;
-    color: $form-text;
-    text-align: right;
-    background-color: $form-label-bg;
-    box-shadow: -4px 4px 7px 1px $form-box-shadow;
+  form {
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
 
     @include min(760) {
-      text-align: center;
+      padding-top: 20px;
     }
 
     @include min(900) {
-      font-size: 3em;
-      text-align: right;
+      margin-bottom: 0;
+
+      .btn-lg {
+        font-size: 2.5em;
+      }
     }
-  }
-}
 
-.form-group {
-  margin-bottom: 10px;
+    label {
+      padding: 10px 0;
+      font-size: 1.2em;
+      color: $form-text;
+      text-align: right;
+      background-color: $form-label-bg;
+      box-shadow: -4px 4px 7px 1px $form-box-shadow;
 
-  &.form-group-lg {
-    div.col-xs-9 {
-      padding-left: 4px;
+      @include min(760) {
+        text-align: center;
+      }
 
-      @include min(890) {
-        padding-left: 15px;
+      @include min(900) {
+        font-size: 3em;
+        text-align: right;
       }
     }
   }
 
-  button {
-    @include max(760) {
-      float: right;
+  .form-group {
+    margin-bottom: 10px;
+
+    &.form-group-lg {
+      div.col-xs-9 {
+        padding-left: 4px;
+
+        @include min(890) {
+          padding-left: 15px;
+        }
+      }
+    }
+
+    button {
+      @include max(760) {
+        float: right;
+      }
     }
   }
-}
 
-.form-group-lg .form-control {
-  font-size: 1.6em;
+  .form-group-lg .form-control {
+    font-size: 1.6em;
 
-  &#message {
-    height: 100px;
+    &#message {
+      height: 100px;
+
+      @include min(890) {
+        height: 150px;
+      }
+    }
+
+    @include min(900) {
+      height: 80px;
+    }
+  }
+
+  @include between(768, 890) {
+    .col-sm-3 {
+      padding-left: 0;
+    }
+  }
+
+  .btn-lg {
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: $form-button-text;
+    text-transform: uppercase;
+    background-color: $form-button-bg;
+    box-shadow: 6px 6px 7px -3px $form-box-shadow;
+    border-radius: 4px;
+
+    @include min(760) {
+      padding: 14px 35px;
+      font-size: 1.6em;
+    }
+  }
+
+  .btn-lg:hover {
+    color: $form-button-text-hover;
+    background-color: $form-button-hover-bg;
+  }
+
+  form label,
+  .btn-lg {
+    @include fonts($form-font, $form-font-weight);
 
     @include min(890) {
-      height: 150px;
+      letter-spacing: 2px;
     }
-  }
-
-  @include min(900) {
-    height: 80px;
-  }
-}
-
-@include between(768, 890) {
-  .col-sm-3 {
-    padding-left: 0;
-  }
-}
-
-.btn-lg {
-  padding: 5px 10px;
-  font-size: 1.2em;
-  color: $form-button-text;
-  text-transform: uppercase;
-  background-color: $form-button-bg;
-  box-shadow: 6px 6px 7px -3px $form-box-shadow;
-  border-radius: 4px;
-
-  @include min(760) {
-    padding: 14px 35px;
-    font-size: 1.6em;
-  }
-}
-
-.btn-lg:hover {
-  color: $form-button-text-hover;
-  background-color: $form-button-hover-bg;
-}
-
-form label,
-.btn-lg {
-  @include fonts($form-font, $form-font-weight);
-
-  @include min(890) {
-    letter-spacing: 2px;
   }
 }

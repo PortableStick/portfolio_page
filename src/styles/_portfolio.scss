@@ -5,26 +5,64 @@
   padding-right: 5px;
   background-color: $portfolio-bg;
 
+  .open-filter-panel {
+    position: relative;
+    top: 10px;
+    left: 83vw;
+    font-size: 2em;
+    width: auto;
+    color: $open-filter-panel;
+
+    @include min(890) {
+      left: 87vw;
+    }
+  }
+
   .sort-buttons {
     margin: 0 auto;
-    text-align: center;
+    list-style-type: none;
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    position: fixed;
+    left: -999px;
+    top: 50px;
+    z-index: 10;
+    overflow-y: scroll;
 
-    .btn {
-      margin-top: 5px;
-      background-color: $sort-button-bg;
-      box-shadow: $sort-button-box-shadow-inset;
+    li:nth-child(2) {
+      margin-top: 20px;
+    }
 
-      &:not(:last-child) {
-        margin-right: 8px;
+    .sort-item {
+      // margin-top: 5px;
+      font-size: 1em;
+      color: $sort-btn;
+      padding: 2px 4px;
+
+      &.active {
+        background-color: $sort-btn-active-bg;
       }
 
       &:hover {
-        background-color: $sort-button-bg-hover;
+        cursor: pointer;
+        background-color: $sort-btn-hover-bg;
       }
 
-      @include min(890) {
-        box-shadow: $sort-button-box-shadow-inset, 3px 3px 6px -2px #aaa;
+      @include min(768) {
+        font-size: 1.4em;
+        padding: 5px 10px;
       }
+    }
+
+    .close-sort-btn {
+      float: right;
+      letter-spacing: 2px;
+      clear: left;
+    }
+
+    @include min(768) {
+      height: 95vh;
     }
   }
 
@@ -220,5 +258,7 @@
 }
 
 %big-item-tech-background {
-  filter: blur(1px) brightness(0.5);
+  @include max(768) {
+    filter: blur(1px) brightness(0.5);
+  }
 }

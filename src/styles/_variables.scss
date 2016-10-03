@@ -120,6 +120,8 @@ $portfolio-item-description-font: $font-white;
 $grid-item-title-color: lighten($rgba-secondary-2-1, 60%);
 $tech-list-font-color: darken($grid-item-title-color, 10%);
 $check-it-out: $font-white;
+$sort-btn: $font-black;
+$open-filter-panel: $font-black;
 
 /* Borders */
 
@@ -151,6 +153,8 @@ $portfolio-item-bg-hover: lighten($azalea-leaf, 15%);
 $form-label-bg: $button-red;
 $grid-item-mobile-image: none;
 $project-links-background-color: transparent;
+$sort-btn-hover-bg: transparentize($font-black, 0.8);
+$sort-btn-active-bg: transparentize($font-black, 0.8);
 
 /* Button Backgrounds */
 

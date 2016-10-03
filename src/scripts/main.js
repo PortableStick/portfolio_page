@@ -12,8 +12,11 @@ const topOffset = 50,
     $mainNav = $('#main-nav'),
     $footer = $('footer'),
     $gridItems = $('.grid-item'),
-    $sortButtons = $('.sort-buttons .btn'),
-    $navBar = $('.navbar-nav');
+    $sortButtons = $('.sort-item'),
+    $navBar = $('.navbar-nav'),
+    $sortBtnsDialog = $('.sort-buttons'),
+    $closeSortBtn = $('.close-sort-btn'),
+    $openFilterBtn = $('.open-filter-panel');
 
 function setNavbar() {
     var loc = $('li.active a').attr('href');
@@ -58,6 +61,27 @@ $(document).ready(function() {
         $grid.masonry();
     });
 
+    $closeSortBtn.click(event => {
+        $sortBtnsDialog.animate({
+            left: '-999px'
+        }, 500);
+        $openFilterBtn.removeClass('open');
+    });
+
+    $openFilterBtn.click(event => {
+        if($(event.target).hasClass('open')) {
+            $sortBtnsDialog.animate({
+                left: '-999px'
+            }, 500);
+            $(event.target).removeClass('open');
+        } else {
+            $sortBtnsDialog.animate({
+                left: '0'
+            }, 500);
+            $(event.target).addClass('open');
+        }
+    })
+
     $("#email-form").on('submit', event => {
         event.preventDefault();
         $.post('http://localhost:9000/sendmail',$(event.target).serialize())
@@ -74,9 +98,9 @@ $(document).ready(function() {
     });
 
     $sortButtons.click((event) => {
-        const $target = $(event.target),
+        const $target = $(event.currentTarget),
          $targetClass = $(event.target).html().toLowerCase();
-
+         console.log($target);
         $gridItems.removeClass('big-item');
 
          if($target.hasClass('active')) {
@@ -85,6 +109,12 @@ $(document).ready(function() {
                 $grid.masonry();
                 $gridItems.fadeIn(500);
                 $sortButtons.removeClass('active');
+                if(window.innerWidth <= 768) {
+                    $sortBtnsDialog.animate({
+                        left: '-999px'
+                    }, 1000);
+                    $openFilterBtn.removeClass('open');
+                }
             });
          } else {
             $sortButtons.removeClass('active');
@@ -95,6 +125,12 @@ $(document).ready(function() {
                 $grid.masonry();
                 $targetGridItems.fadeIn(500);
                 $target.addClass('active');
+                if(window.innerWidth <= 768) {
+                    $sortBtnsDialog.animate({
+                        left: '-999px'
+                    }, 1000);
+                    $openFilterBtn.removeClass('open');
+                }
             });
          }
     });

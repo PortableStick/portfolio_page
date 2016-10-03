@@ -1,5 +1,7 @@
 #portfolio.container-fluid.page
-    .sort-buttons
+    .btn.btn-lg.open-filter-panel #[i.fa.fa-filter] #[span.hidden-xs Filter]
+    ul.sort-buttons
+        .btn.close-sort-btn [x]
         for tech in techs
             include tech_button
     .grid
