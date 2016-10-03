@@ -69,16 +69,16 @@ $(document).ready(() => {
     });
 
     $openFilterBtn.click(event => {
-        if($(event.target).hasClass('open')) {
+        if($openFilterBtn.hasClass('open')) {
             $sortBtnsDialog.animate({
                 left: '-999px'
             }, 500);
-            $(event.target).removeClass('open');
+            $openFilterBtn.removeClass('open');
         } else {
             $sortBtnsDialog.animate({
                 left: '0'
             }, 500);
-            $(event.target).addClass('open');
+            $openFilterBtn.addClass('open');
         }
     })
 
