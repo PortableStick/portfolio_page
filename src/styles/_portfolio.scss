@@ -22,6 +22,7 @@
     margin: 0 auto;
     list-style-type: none;
     background-color: white;
+    height: 100%;
     width: 200px;
     padding: 20px;
     position: fixed;
@@ -29,19 +30,21 @@
     top: 50px;
     z-index: 10;
     overflow-y: scroll;
+    box-shadow: 4px 0 8px $sort-button-box-shadow;
 
     li:nth-child(2) {
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .sort-item {
-      // margin-top: 5px;
       font-size: 1em;
       color: $sort-btn;
-      padding: 2px 4px;
+      padding: 2px;
+      margin: 4px 0;
 
       &.active {
         background-color: $sort-btn-active-bg;
+        box-shadow: 0 0 4px $sort-btn-active-border;
       }
 
       &:hover {
@@ -49,9 +52,13 @@
         background-color: $sort-btn-hover-bg;
       }
 
+      p {
+        margin: 0;
+      }
+
       @include min(768) {
         font-size: 1.4em;
-        padding: 5px 10px;
+        padding: 5px;
       }
     }
 
