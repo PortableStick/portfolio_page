@@ -29,7 +29,7 @@ function setNavbar() {
     }
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
 
     $('.current-year').html(` ${currentYear} `);
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
           transitionDuration: '0.2s'
         });
 
-    $gridItems.on('click', function(event) {
+    $gridItems.on('click', event => {
         if($(event.target).is('a.project-link')) {
             return;
         }
@@ -97,7 +97,7 @@ $(document).ready(function() {
         $('#collapse.in').collapse('hide');
     });
 
-    $sortButtons.click((event) => {
+    $sortButtons.click(event => {
         const $target = $(event.currentTarget),
          $targetClass = $(event.target).is('a') ? $(event.target).html().toLowerCase() : $(event.target).find('a').html().toLowerCase();
         $gridItems.removeClass('big-item');
@@ -122,9 +122,6 @@ $(document).ready(function() {
                     return $(target).find('span').hasClass($targetClass);
                 }).css('display', 'inline-block');
                 $grid.masonry();
-                if($targetGridItems.length === 0) {
-                    console.log($targetClass, event);
-                }
                 $targetGridItems.fadeIn(500);
                 $target.addClass('active');
                 if(window.innerWidth <= 768) {
