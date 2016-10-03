@@ -28,10 +28,7 @@
     }
 
     &.big-item {
-        #{$id} {
-          // @include min(768) {
-          //   background-image: url($url);
-          // }
+        ##{$id} {
           @extend %big-item-tech-background;
         }
     }

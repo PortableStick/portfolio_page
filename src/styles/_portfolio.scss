@@ -108,11 +108,15 @@
         padding: 10px 10px 0;
         background-image: $grid-item-mobile-image;
         background-color: $portfolio-item-bg;
+        width: 100%;
         height: 100%;
+        position: absolute;
+        z-index: 2;
 
         @include min(768) {
-        background-image: $grid-item-grad;
+          background-image: $grid-item-grad;
           height: auto;
+          position: relative;
         }
       }
 
@@ -130,7 +134,7 @@
 
       &.big-item {
         user-select: none;
-        height: auto;
+        height: 160px;
         text-align: center;
 
         @include min(768) {
@@ -160,7 +164,7 @@
 
           @include min(768) {
             position: absolute;
-            top: 50%;
+            top: 360px;
             opacity: 0;
             transition: opacity 0.3s;
           }
@@ -216,5 +220,5 @@
 }
 
 %big-item-tech-background {
-  background-size: 120% 80%;
+  filter: blur(1px) brightness(0.5);
 }

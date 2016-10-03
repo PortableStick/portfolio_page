@@ -117,8 +117,8 @@ $form-button-text-hover: $form-button-text;
 $description-color: #fff;
 $text-shadow: $transparent-black;
 $portfolio-item-description-font: $font-white;
-$tech-list-font-color: $font-white;
-$grid-item-title-color: $antique-white;
+$grid-item-title-color: lighten($rgba-secondary-2-1, 60%);
+$tech-list-font-color: darken($grid-item-title-color, 10%);
 $check-it-out: $font-white;
 
 /* Borders */
@@ -146,7 +146,7 @@ $full-nav-bg: $phantom-mist;
 $nav-toggle-hover-bg: lighten($transparent-black, 10%);
 $collapsing-menu-bg: $transparent-black;
 $about-image-wrapper: #fff;
-$portfolio-item-bg: transparent;
+$portfolio-item-bg: rgba(0,0,0,0.4);
 $portfolio-item-bg-hover: lighten($azalea-leaf, 15%);
 $form-label-bg: $button-red;
 $grid-item-mobile-image: none;
