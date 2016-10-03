@@ -8,6 +8,7 @@
   &.inbody {
     background: $main-grad;
     background-color: $full-nav-bg;
+    box-shadow: 0 0 7px $navbar-box-shadow;
   }
 }
 
@@ -38,6 +39,7 @@ nav .collapsing {
         font-size: 1.8em;
         font-variant: bold;
         color: $nav-links;
+        transition: color 0.5s;
 
         @include fonts($navbar-font, $navbar-font-weight);
       }
@@ -65,6 +67,7 @@ nav .collapsing {
   .navbar-brand {
     color: $brand-color;
     margin: 0 0 10px;
+    transition: color 0.5s;
 
     &:hover {
       color: $brand-hover-color;

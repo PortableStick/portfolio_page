@@ -100,15 +100,14 @@ $rgba-secondary-2-4: rgba( 55, 17, 15,1);
 /* Text */
 
 $title-font-color: $font-white;
-$ref-text: $font-white;
 $nav-links: $font-white;
-$nav-hover-color: $rgba-secondary-2-1;
+$nav-hover-color: lighten($rgba-secondary-2-1, 10%);
 $active-link-hover: $nav-hover-color;
 $brand-color: $font-white;
-$brand-hover-color: darken($brand-color, 10%);
+$brand-hover-color: lighten($rgba-secondary-2-1, 10%);
 $copyright-color: $font-white;
-$footer-links: $font-white;
-$footer-link-hover: $sweet-spiceberry;
+$ref-text: $font-white;
+$ref-text-hover: lighten($rgba-secondary-2-1, 10%);
 $about-font-color: $font-black;
 $form-text: $font-white;
 $form-button-text: $font-white;
@@ -182,3 +181,6 @@ $sort-button-box-shadow-inset: inset 0 0 18px 2px $sort-button-box-shadow;
 
 $project-link-button-box-shadow: lighten($project-link-button-background-color, 10%);
 $project-link-button-box-shadow-inset: inset 0 0 18px 2px $project-link-button-box-shadow;
+
+$footer-box-shadow: lighten($sassy-green, 10%);
+$navbar-box-shadow: lighten($sassy-green, 10%);
