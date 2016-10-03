@@ -99,8 +99,7 @@ $(document).ready(function() {
 
     $sortButtons.click((event) => {
         const $target = $(event.currentTarget),
-         $targetClass = $(event.target).html().toLowerCase();
-         console.log($target);
+         $targetClass = $(event.target).is('a') ? $(event.target).html().toLowerCase() : $(event.target).find('a').html().toLowerCase();
         $gridItems.removeClass('big-item');
 
          if($target.hasClass('active')) {
@@ -123,6 +122,9 @@ $(document).ready(function() {
                     return $(target).find('span').hasClass($targetClass);
                 }).css('display', 'inline-block');
                 $grid.masonry();
+                if($targetGridItems.length === 0) {
+                    console.log($targetClass, event);
+                }
                 $targetGridItems.fadeIn(500);
                 $target.addClass('active');
                 if(window.innerWidth <= 768) {
