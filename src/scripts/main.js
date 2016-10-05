@@ -18,8 +18,7 @@ const topOffset = 50,
     $closeSortBtn = $('.close-sort-btn'),
     $openFilterBtn = $('.open-filter-panel');
 
-function setNavbar() {
-    var loc = $('li.active a').attr('href');
+function setNavbar(loc) {
     if (loc !== '#landing') {
         $mainNav.addClass('inbody');
         $footer.slideDown(250);
@@ -29,6 +28,28 @@ function setNavbar() {
     }
 }
 
+function checkLocation() {
+    const loc = $('li.active a').attr('href');
+    setNavbar(loc);
+    if(loc !== '#portfolio') {
+        closeFilter();
+    }
+}
+
+function closeFilter() {
+    $sortBtnsDialog.animate({
+        left: '-999px'
+    }, 500);
+    $openFilterBtn.removeClass('open');
+}
+
+function openFilter() {
+    $sortBtnsDialog.animate({
+        left: '0'
+    }, 500);
+    $openFilterBtn.addClass('open');
+}
+
 $(document).ready(() => {
 
     $('.current-year').html(` ${currentYear} `);
@@ -36,7 +57,7 @@ $(document).ready(() => {
     $('body').scrollspy({
         target: '#main-nav',
         offset: topOffset
-    }).on('activate.bs.scrollspy', setNavbar);
+    }).on('activate.bs.scrollspy', checkLocation);
 
     let $grid = $('.grid').masonry({
           itemSelector: '.grid-item',
@@ -69,6 +90,9 @@ $(document).ready(() => {
     });
 
     $openFilterBtn.click(event => {
+        if($('li.active a').attr('href') !== "#portfolio") {
+            window.location.hash = '#portfolio';
+        }
         if($openFilterBtn.hasClass('open')) {
             $sortBtnsDialog.animate({
                 left: '-999px'
@@ -100,11 +124,10 @@ $(document).ready(() => {
     $sortButtons.click(event => {
         const $target = $(event.currentTarget),
          $targetClass = $(event.target).is('a') ? $(event.target).html().toLowerCase() : $(event.target).find('a').html().toLowerCase();
-        $gridItems.removeClass('big-item');
 
          if($target.hasClass('active')) {
             $gridItems.fadeOut(500).promise().done(() => {
-                $gridItems.css('display', 'inline-block');
+                $gridItems.css('display', 'inline-block').removeClass('big-item');
                 $grid.masonry();
                 $gridItems.fadeIn(500);
                 $sortButtons.removeClass('active');
@@ -120,7 +143,7 @@ $(document).ready(() => {
             $gridItems.fadeOut(500).promise().done(() => {
                 let $targetGridItems = $gridItems.filter((idx, target) => {
                     return $(target).find('span').hasClass($targetClass);
-                }).css('display', 'inline-block');
+                }).css('display', 'inline-block').removeClass('big-item');
                 $grid.masonry();
                 $targetGridItems.fadeIn(500);
                 $target.addClass('active');
@@ -134,5 +157,5 @@ $(document).ready(() => {
          }
     });
 
-    setNavbar();
+    setNavbar($('li.active a').attr('href'));
 });
