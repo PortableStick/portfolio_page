@@ -3,7 +3,7 @@
 #landing {
   position: relative;
   padding: 0;
-  background-image: $landing-radial-grad, url("https://dl.dropboxusercontent.com/u/4223104/images/landingbg.jpg");
+  background-image: $landing-radial-grad, url("../images/mountains.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -12,11 +12,9 @@
     height: 50vh;
   }
 
-
   @include min(890) {
     height: 100vh;
   }
-
 
   .title {
     position: absolute;
@@ -30,7 +28,6 @@
     @include min(500) {
       font-size: 45px;
     }
-
 
     @include min(900) {
       top: 35%;

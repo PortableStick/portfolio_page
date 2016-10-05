@@ -99,11 +99,13 @@ $rgba-secondary-2-4: rgba( 55, 17, 15,1);
 
 /* Text */
 
-$title-font-color: $font-white;
-$nav-links: $font-white;
-$nav-hover-color: lighten($rgba-secondary-2-1, 10%);
+$title-font-color: $font-black;
+$nav-links: $font-black;
+$nav-hover-color: darken($rgba-secondary-2-1, 10%);
 $active-link-hover: $nav-hover-color;
-$brand-color: $font-white;
+$nav-links-inbody: $font-white;
+$brand-color: $font-black;
+$brand-color-inbody: $font-white;
 $brand-hover-color: lighten($rgba-secondary-2-1, 10%);
 $copyright-color: $font-white;
 $ref-text: $font-white;
@@ -170,13 +172,13 @@ $project-link-button-background-color-hover: lighten($project-link-button-backgr
 
 $main-grad: linear-gradient(to right, lighten($sassy-green, 10%) 0%, $sassy-green 100%);
 $landing-radial-grad: radial-gradient(circle at 0 0, transparentize($light-urple, 0.5) 10%, transparent 100%);
-$grid-item-grad: linear-gradient(to bottom, $rgba-primary-2 0%, $rgba-primary-1 100%);
+$grid-item-grad: linear-gradient(to bottom, $rgba-primary-2 0%, $rgba-primary-1 60%, lighten($rgba-primary-2, 10%) 100%);
 $grid-item-hover-grad: linear-gradient(to bottom, $rgba-primary-0 0%, $rgba-primary-1 100%);
 
 /* Box Shadows
 ================================ */
 
-$sort-button-box-shadow: lighten($rgba-primary-1, 10%);
+$sort-button-box-shadow: lighten($rgba-secondary-2-1, 10%);
 $sort-button-box-shadow-inset: inset 0 0 18px 2px $sort-button-box-shadow;
 
 $project-link-button-box-shadow: lighten($project-link-button-background-color, 10%);
@@ -184,3 +186,7 @@ $project-link-button-box-shadow-inset: inset 0 0 18px 2px $project-link-button-b
 
 $footer-box-shadow: lighten($sassy-green, 10%);
 $navbar-box-shadow: lighten($sassy-green, 10%);
+
+
+$grid-item-text-shadow: 2px 2px 2px $transparent-black;
+$sort-buttons-text-shadow: 2px 2px 2px $light-grey;

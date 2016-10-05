@@ -75,6 +75,21 @@ nav .collapsing {
     }
   }
 
+  &.inbody {
+    .navbar-nav {
+      > li {
+        > a,
+        > a:visited {
+          color: $nav-links-inbody;
+        }
+      }
+    }
+
+    .navbar-brand {
+      color: $brand-color-inbody;
+    }
+  }
+
   .navbar-toggle {
     border-color: $nav-toggle-border;
 

@@ -31,6 +31,7 @@
     z-index: 10;
     overflow-y: scroll;
     box-shadow: 4px 0 8px $sort-button-box-shadow;
+    text-shadow: $sort-buttons-text-shadow;
 
     li:nth-child(2) {
       margin-top: 30px;
@@ -104,6 +105,7 @@
       padding: 10px auto;
       color: $portfolio-item-description-font;
       overflow: hidden;
+      text-shadow: $grid-item-text-shadow;
 
       $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
