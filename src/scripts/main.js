@@ -82,27 +82,16 @@ $(document).ready(() => {
         $grid.masonry();
     });
 
-    $closeSortBtn.click(event => {
-        $sortBtnsDialog.animate({
-            left: '-999px'
-        }, 500);
-        $openFilterBtn.removeClass('open');
-    });
+    $closeSortBtn.click(closeFilter);
 
     $openFilterBtn.click(event => {
         if($('li.active a').attr('href') !== "#portfolio") {
             window.location.hash = '#portfolio';
         }
         if($openFilterBtn.hasClass('open')) {
-            $sortBtnsDialog.animate({
-                left: '-999px'
-            }, 500);
-            $openFilterBtn.removeClass('open');
+            closeFilter();
         } else {
-            $sortBtnsDialog.animate({
-                left: '0'
-            }, 500);
-            $openFilterBtn.addClass('open');
+            openFilter();
         }
     })
 
@@ -132,10 +121,7 @@ $(document).ready(() => {
                 $gridItems.fadeIn(500);
                 $sortButtons.removeClass('active');
                 if(window.innerWidth <= 768) {
-                    $sortBtnsDialog.animate({
-                        left: '-999px'
-                    }, 1000);
-                    $openFilterBtn.removeClass('open');
+                    closeFilter();
                 }
             });
          } else {
@@ -148,10 +134,7 @@ $(document).ready(() => {
                 $targetGridItems.fadeIn(500);
                 $target.addClass('active');
                 if(window.innerWidth <= 768) {
-                    $sortBtnsDialog.animate({
-                        left: '-999px'
-                    }, 1000);
-                    $openFilterBtn.removeClass('open');
+                    closeFilter();
                 }
             });
          }

@@ -110,7 +110,7 @@ $brand-hover-color: lighten($rgba-secondary-2-1, 10%);
 $copyright-color: $font-white;
 $ref-text: $font-white;
 $ref-text-hover: lighten($rgba-secondary-2-1, 10%);
-$about-font-color: $font-black;
+$bio-font-color: $font-white;
 $form-text: $font-white;
 $form-button-text: $font-white;
 $contact-heading: $font-black;
@@ -135,6 +135,7 @@ $web-border: transparentize($transparent-black, 0.5);
 $form-box-shadow: transparentize($font-black, 0.3);
 $grid-item-border-color: $rgba-primary-4;
 $sort-btn-active-border: $rgba-secondary-1-1;
+$bio-border-color: $rgba-secondary-1-4;
 
 /* Section Backgrounds */
 
@@ -157,6 +158,7 @@ $grid-item-mobile-image: none;
 $project-links-background-color: transparent;
 $sort-btn-hover-bg: transparentize($font-black, 0.8);
 $sort-btn-active-bg: transparentize($font-black, 0.8);
+$bio-bg: transparentize($rgba-secondary-1-1, 0.3);
 
 /* Button Backgrounds */
 
@@ -171,7 +173,7 @@ $project-link-button-background-color-hover: lighten($project-link-button-backgr
 ================================ */
 
 $main-grad: linear-gradient(to right, lighten($sassy-green, 10%) 0%, $sassy-green 100%);
-$landing-radial-grad: radial-gradient(circle at 0 0, transparentize($light-urple, 0.5) 10%, transparent 100%);
+$landing-radial-grad: radial-gradient(circle at 0 0, transparentize($rgba-primary-1, 0.8) 60%, transparentize($rgba-secondary-2-0, 0.7) 100%);
 $grid-item-grad: linear-gradient(to bottom, $rgba-primary-2 0%, $rgba-primary-1 60%, lighten($rgba-primary-2, 10%) 100%);
 $grid-item-hover-grad: linear-gradient(to bottom, $rgba-primary-0 0%, $rgba-primary-1 100%);
 
