@@ -45,7 +45,6 @@
 
       &.active {
         background-color: $sort-btn-active-bg;
-        // box-shadow: 0 0 4px $sort-btn-active-border;
       }
 
       &:hover {
@@ -99,8 +98,6 @@
 
     .grid-item {
       float: left;
-      // border: 1px solid;
-      // border-color: $grid-item-border-color;
       border-radius: 5px;
       margin-bottom: 5px;
       padding: 10px auto;
@@ -142,10 +139,15 @@
         margin: 0;
         font-size: 1.2em;
         color: $grid-item-title-color-mobile;
+        background-color: rgba(255,255,255,0.8);
+        width: auto;
+        display: inline-block;
+        padding: 2px 4px;
 
         @include min(768) {
-          font-size: 1.6em;
+          font-size: 1.4em;
           color: $grid-item-title-color-desktop;
+          background-color: transparent;
         }
       }
 
@@ -163,11 +165,11 @@
         position: absolute;
         z-index: 2;
         color: $portfolio-item-description-font-mobile;
-        border-bottom: 1px dotted #ccc;
 
         @include fonts($description-font, $description-font-wt);
 
         @include min(768) {
+          border-bottom: 1px dotted $project-border-color;
           color: $portfolio-item-description-font-desktop;
           background-color: $portfolio-item-bg;
           height: auto;
@@ -177,7 +179,7 @@
 
       .techs {
         clear: both;
-        display: block;
+        display: none;
         font-style: italic;
         margin: 3px auto 0;
         padding-bottom: 5px;
@@ -186,11 +188,10 @@
 
         span {
           color: $tech-list-font-color-mobile;
+        }
 
-          @include min(768) {
-            color: $tech-list-font-color-desktop;
-          }
-
+        @include min(768) {
+          display: block;
         }
       }
 
@@ -204,6 +205,16 @@
           height: 740px;
         }
 
+        h3 {
+          display: block;
+          background-color: transparent;
+          color: $grid-item-title-color-mobile-big;
+
+          @include min(768) {
+            color: $grid-item-title-color-desktop;
+          }
+        }
+
         a {
           display: inline;
         }
@@ -213,6 +224,16 @@
         }
 
         .techs {
+          display: block;
+
+          span {
+            color: $tech-list-font-color-mobile-big;
+
+            @include min(768) {
+              color: $tech-list-font-color-desktop;
+            }
+          }
+
           &::before {
             content: "Uses ";
           }
@@ -255,7 +276,6 @@
       }
 
       @include min(890) {
-        // box-shadow: 6px 5px 8px -3px #666;
         margin-bottom: 18px;
       }
     }

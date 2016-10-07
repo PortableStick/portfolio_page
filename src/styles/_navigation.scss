@@ -70,14 +70,14 @@ nav .collapsing {
     transition: color 0.5s;
 
     .first-name {
-      @include fonts($first-name-font);
+      @include fonts($first-name-font, $first-name-font-wt);
 
       display: inline-block;
       transform: translateY(-3px);
     }
 
     .last-name {
-      @include fonts($last-name-font);
+      @include fonts($last-name-font, $last-name-font-wt);
 
       font-size: 1.7em;
       margin-left: -9px;
