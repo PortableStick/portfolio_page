@@ -12,6 +12,7 @@
     font-size: 2em;
     width: auto;
     color: $open-filter-panel;
+    @include fonts($filter-panel-font, $filter-panel-font-wt);
 
     @include min(890) {
       left: 87vw;
@@ -30,8 +31,8 @@
     top: 50px;
     z-index: 10;
     overflow-y: scroll;
-    box-shadow: 4px 0 8px $sort-button-box-shadow;
-    text-shadow: $sort-buttons-text-shadow;
+
+    @include fonts($sort-button-font, $sort-button-font-wt);
 
     li:nth-child(2) {
       margin-top: 30px;
@@ -44,7 +45,7 @@
 
       &.active {
         background-color: $sort-btn-active-bg;
-        box-shadow: 0 0 4px $sort-btn-active-border;
+        // box-shadow: 0 0 4px $sort-btn-active-border;
       }
 
       &:hover {
@@ -98,14 +99,12 @@
 
     .grid-item {
       float: left;
-      border: 1px solid;
-      border-color: $grid-item-border-color;
+      // border: 1px solid;
+      // border-color: $grid-item-border-color;
       border-radius: 5px;
       margin-bottom: 5px;
       padding: 10px auto;
-      color: $portfolio-item-description-font;
       overflow: hidden;
-      text-shadow: $grid-item-text-shadow;
 
       $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
@@ -142,10 +141,11 @@
       h3 {
         margin: 0;
         font-size: 1.2em;
-        color: $grid-item-title-color;
+        color: $grid-item-title-color-mobile;
 
         @include min(768) {
           font-size: 1.6em;
+          color: $grid-item-title-color-desktop;
         }
       }
 
@@ -158,14 +158,18 @@
       .description {
         padding: 10px 10px 0;
         background-image: $grid-item-mobile-image;
-        background-color: $portfolio-item-bg;
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: 2;
+        color: $portfolio-item-description-font-mobile;
+        border-bottom: 1px dotted #ccc;
+
+        @include fonts($description-font, $description-font-wt);
 
         @include min(768) {
-          background-image: $grid-item-grad;
+          color: $portfolio-item-description-font-desktop;
+          background-color: $portfolio-item-bg;
           height: auto;
           position: relative;
         }
@@ -178,8 +182,15 @@
         margin: 3px auto 0;
         padding-bottom: 5px;
 
+        @include fonts($tech-font, $tech-font-wt);
+
         span {
-          color: $tech-list-font-color;
+          color: $tech-list-font-color-mobile;
+
+          @include min(768) {
+            color: $tech-list-font-color-desktop;
+          }
+
         }
       }
 
@@ -225,7 +236,8 @@
             color: $check-it-out;
             font-size: 1em;
             background-color: $project-link-button-background-color;
-            box-shadow: $project-link-button-box-shadow-inset, 6px 6px 7px -3px rgba(85, 85, 85, .7);
+
+            @include fonts($project-links-font, $project-links-font-wt)
 
             &:hover {
               background-color: $project-link-button-background-color-hover;
@@ -243,7 +255,7 @@
       }
 
       @include min(890) {
-        box-shadow: 6px 5px 8px -3px #666;
+        // box-shadow: 6px 5px 8px -3px #666;
         margin-bottom: 18px;
       }
     }

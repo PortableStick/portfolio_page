@@ -13,6 +13,8 @@ footer.navbar-default.navbar-fixed-bottom {
     font-size: 1.2em;
     padding-left: 30px;
 
+    @include fonts($refs-font, $refs-font-wt);
+
     a,
     i,
     span {
@@ -36,6 +38,8 @@ footer.navbar-default.navbar-fixed-bottom {
     cursor: default;
     user-select: none;
     text-align: right;
+
+    @include fonts($copyright-font, $copyright-font-wt);
 
     h5 {
       padding-top: 2px;

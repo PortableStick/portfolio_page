@@ -1,26 +1,43 @@
 /* Font delcarations
 ================================ */
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather|Josefin+Slab:700,600|Comfortaa);
+@import 'https://fonts.googleapis.com/css?family=Anonymous+Pro:700|Caveat|Jaldi:400|Merriweather';
 $merriweather: "Merriweather", serif;
-$josefin: "Josefin Slab", serif;
-$comfortaa: "Comfortaa", sans-serif;
+$anonymous-pro: "Anonymous Pro", sans-serif;
+$caveat: "Caveat", sans-serif;
+$jaldi: "Jaldi", sans-serif;
 
 /* Font assignments
 ================================ */
 
-$navbar-font: $comfortaa;
-$navbar-font-weight: 600;
-$title-font: $comfortaa;
-$reference-link-font: $comfortaa;
+$navbar-font: $jaldi;
+$navbar-font-weight: 400;
+$first-name-font: $anonymous-pro;
+$last-name-font: $caveat;
+$title-font: $jaldi;
+$title-font-wt: 200;
 $bio-font: $merriweather;
-$contact-heading-font: $comfortaa;
-$contact-heading-font-weight: 700;
-$form-font: $comfortaa;
-$form-font-weight: 600;
-$description-heading-font: $josefin;
+$bio-font-wt: 200;
+$filter-panel-font: $jaldi;
+$filter-panel-font-wt: 200;
+$sort-button-font: $jaldi;
+$sort-button-font-wt: 200;
+$description-heading-font: $jaldi;
 $description-heading-font-wt: 700;
-$description-text-font: $merriweather;
+$description-font: $merriweather;
+$description-font-wt: 200;
+$tech-font: $merriweather;
+$tech-font-wt: 200;
+$project-links-font: $jaldi;
+$project-links-font-wt: 400;
+$contact-heading-font: $merriweather;
+$contact-heading-font-weight: 400;
+$form-font: $jaldi;
+$form-font-weight: 200;
+$copyright-font: $jaldi;
+$copyright-font-wt: 400;
+$refs-font: $jaldi;
+$refs-font-wt: 400;
 
 /* Color declarations
 ================================ */
@@ -30,6 +47,7 @@ $font-black: #555;
 $light-green: #eaf9c1;
 $olive-green: #a2ad86;
 $light-grey: #ddd;
+$middle-grey: #888;
 
 $dark-green: #2f4525;
 $deep-blue: #332cff;
@@ -117,9 +135,12 @@ $contact-heading: $font-black;
 $form-button-text-hover: $form-button-text;
 $description-color: #fff;
 $text-shadow: $transparent-black;
-$portfolio-item-description-font: $font-white;
-$grid-item-title-color: lighten($rgba-secondary-2-1, 60%);
-$tech-list-font-color: darken($grid-item-title-color, 10%);
+$portfolio-item-description-font-mobile: $font-white;
+$portfolio-item-description-font-desktop: $font-black;
+$grid-item-title-color-mobile: $font-white;
+$grid-item-title-color-desktop: $font-black;
+$tech-list-font-color-mobile: darken($grid-item-title-color-mobile, 10%);
+$tech-list-font-color-desktop: lighten($grid-item-title-color-desktop, 10%);
 $check-it-out: $font-white;
 $sort-btn: $font-black;
 $open-filter-panel: $font-black;
@@ -151,7 +172,7 @@ $full-nav-bg: $phantom-mist;
 $nav-toggle-hover-bg: lighten($transparent-black, 10%);
 $collapsing-menu-bg: $transparent-black;
 $about-image-wrapper: #fff;
-$portfolio-item-bg: rgba(0,0,0,0.4);
+$portfolio-item-bg: #fff;
 $portfolio-item-bg-hover: lighten($azalea-leaf, 15%);
 $form-label-bg: $button-red;
 $grid-item-mobile-image: none;

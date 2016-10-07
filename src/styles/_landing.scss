@@ -23,16 +23,18 @@
     font-size: 38px;
     color: $title-font-color;
 
-    @include fonts($title-font);
+    @include fonts($title-font, $title-font-wt);
 
     @include min(500) {
       font-size: 45px;
+      letter-spacing: 0.4em;
     }
 
     @include min(900) {
       top: 35%;
       left: 15%;
       font-size: 92px;
+      letter-spacing: 0.6em;
     }
   }
 }

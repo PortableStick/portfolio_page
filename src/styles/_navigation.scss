@@ -69,6 +69,21 @@ nav .collapsing {
     margin: 0 0 10px;
     transition: color 0.5s;
 
+    .first-name {
+      @include fonts($first-name-font);
+
+      display: inline-block;
+      transform: translateY(-3px);
+    }
+
+    .last-name {
+      @include fonts($last-name-font);
+
+      font-size: 1.7em;
+      margin-left: -9px;
+      display: inline-block;
+    }
+
     &:hover {
       color: $brand-hover-color;
       cursor: pointer;
@@ -81,6 +96,12 @@ nav .collapsing {
         > a,
         > a:visited {
           color: $nav-links-inbody;
+        }
+
+        > a:hover,
+        > a:focus {
+          color: $active-link-hover;
+          background-color: transparent;
         }
       }
     }

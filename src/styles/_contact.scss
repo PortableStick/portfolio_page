@@ -47,7 +47,6 @@
       color: $form-text;
       text-align: right;
       background-color: $form-label-bg;
-      box-shadow: -4px 4px 7px 1px $form-box-shadow;
 
       @include min(760) {
         text-align: center;
@@ -108,7 +107,6 @@
     color: $form-button-text;
     text-transform: uppercase;
     background-color: $form-button-bg;
-    box-shadow: 6px 6px 7px -3px $form-box-shadow;
     border-radius: 4px;
 
     @include min(760) {
