@@ -100,6 +100,7 @@ $(document).ready(() => {
         $.post('http://localhost:9000/sendmail',$(event.target).serialize())
             .done(result => {
                 toastr.success("Message sent!");
+                $('#email, #message, #name, #send-button').prop('disabled', true);
             }).catch(error => {
                 toastr.error("Message could not be sent!");
                 console.error(error);
