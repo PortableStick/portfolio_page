@@ -4,8 +4,16 @@
   padding-bottom: 60px;
 
   @include min(890) {
-    padding-top: 200px;
+    padding-top: 13vh;
     padding-bottom: 80px;
+  }
+
+  @include min(890) {
+    height: 95vh;
+  }
+
+  @include max-height(685) {
+    height: auto;
   }
 
   h2 {
@@ -18,10 +26,6 @@
     @include min(890) {
       font-size: 3.5em;
     }
-  }
-
-  @include min(890) {
-    height: 95vh;
   }
 
   form {

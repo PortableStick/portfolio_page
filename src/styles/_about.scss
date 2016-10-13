@@ -10,6 +10,11 @@
 
   @include min(890) {
     height: 100vh;
+
+    @include max-height(895) {
+      height: auto;
+      padding-bottom: 20px;
+    }
   }
 
   #bio {
