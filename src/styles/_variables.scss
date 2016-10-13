@@ -43,6 +43,7 @@ $refs-font-wt: 400;
 ================================ */
 
 $font-white: #eee;
+$transparent-white: rgba(255,255,255,0.8);
 $font-black: #555;
 $transparent-black: rgba(25, 25, 25, 0.8);
 $phantom-mist: #4b4643;
@@ -127,7 +128,8 @@ $grid-item-mobile-image: none;
 $project-links-background-color: transparent;
 $sort-btn-hover-bg: transparentize($font-black, 0.8);
 $sort-btn-active-bg: transparentize($font-black, 0.8);
-$bio-bg: transparentize($rgba-secondary-1-1, 0.3);
+$bio-bg: transparentize($rgba-secondary-1-1, 0.45);
+$project-title-bg: $transparent-white;
 
 /* Button Backgrounds */
 $form-button-bg: $rgba-secondary-2-4;
