@@ -21,6 +21,12 @@
   }
 }
 
+@mixin max-height($max) {
+  @media (max-height: $max + "px") {
+    @content;
+  }
+}
+
 @mixin make-background($id, $url) {
     ##{$id} {
         background-image: url($url);
