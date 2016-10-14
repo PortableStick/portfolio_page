@@ -4,6 +4,7 @@ require('bootstrap');
 $.noConflict(true);
 import toastr from 'toastr';
 import masonry from 'masonry-layout';
+import validate from 'jquery-validation';
 import bridget from 'jquery-bridget';
 bridget('masonry', masonry, $);
 
@@ -97,14 +98,22 @@ $(document).ready(() => {
 
     $("#email-form").on('submit', event => {
         event.preventDefault();
-        $.post('https://api.gregoftheweb.com/sendmail',$(event.target).serialize())
-            .done(result => {
-                toastr.success("Message sent!");
-                $('#email, #message, #name, #send-button').prop('disabled', true);
-            }).catch(error => {
-                toastr.error("Message could not be sent!");
-                console.error(error);
-            });
+        $(event.target).validate({
+            submitHanlder: () => {
+                $.post('https://api.gregoftheweb.com/sendmail',$(event.target).serialize())
+                    .done(result => {
+                        toastr.success("Message sent!");
+                        $('#email, #message, #name, #send-button').prop('disabled', true);
+                    }).catch(error => {
+                        toastr.error("Message could not be sent!");
+                        console.error(error);
+                    });
+            },
+            invalidHandler: () => {
+                toastr.warning("Form is not valid");
+            }
+        })
+
     });
 
     $navBar.on('click', () => {

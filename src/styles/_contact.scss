@@ -52,6 +52,11 @@
       text-align: right;
       background-color: $form-label-bg;
 
+      &.error {
+        padding: 5px;
+        font-size: 1em;
+      }
+
       @include min(760) {
         text-align: center;
       }
@@ -92,6 +97,14 @@
       @include min(890) {
         height: 150px;
       }
+    }
+
+    &:invalid {
+      border: 1px solid red;
+    }
+
+    &:valid {
+      border: 1px solid green;
     }
 
     @include min(900) {
