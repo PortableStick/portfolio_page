@@ -99,12 +99,12 @@
       }
     }
 
-    &:invalid {
-      border: 1px solid red;
+    &:invalid.submitted {
+      box-shadow: 0 0 5px $form-invalid-shadow;
     }
 
-    &:valid {
-      border: 1px solid green;
+    &:valid.submitted {
+      border: 1px solid $form-valid-border;
     }
 
     @include min(900) {

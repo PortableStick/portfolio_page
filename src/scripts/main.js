@@ -98,6 +98,7 @@ $(document).ready(() => {
 
     $("#email-form").on('submit', event => {
         event.preventDefault();
+        $('.form-control').addClass('submitted');
         $(event.target).validate({
             submitHanlder: () => {
                 $.post('https://api.gregoftheweb.com/sendmail',$(event.target).serialize())
