@@ -67,28 +67,28 @@
       "title": "Timestamp Microservice",
       "description": "A simple API that transforms natural language time strings into Unix epoch format, and visa-versa.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/time",
+      "url": "https://api.gregoftheweb.com/time",
       "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "Request Header Parser",
       "description": "Send a GET request to receive request header metadata in JSON format.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/header",
+      "url": "https://api.gregoftheweb.com/header",
       "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "URL Shortener",
       "description": "Send a URL to receive a unique, shortened link. Send the link to be sent to the original location.",
       "techs": ["NodeJS", "ExpressJS", "MongoDB", "Mongoose"],
-      "url": "http://api.mysupertestsite.com:8080/short",
+      "url": "https://api.gregoftheweb.com/short",
       "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
       "title": "File Metadata Microservice",
       "description": "Upload a file to receive the filesize.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/file",
+      "url": "https://api.gregoftheweb.com/file",
       "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
@@ -102,7 +102,7 @@
       "title": "Image Search Abstraction Layer",
       "description": "An API that abstracts Flickr searchers into more terse GET requests.",
       "techs": ["NodeJS", "ExpressJS"],
-      "url": "http://api.mysupertestsite.com:8080/image",
+      "url": "https://api.gregoftheweb.com/image",
       "github": "https://github.com/PortableStick/fcc-backendapis"
       },
     {
