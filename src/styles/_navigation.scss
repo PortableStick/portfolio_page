@@ -38,10 +38,14 @@ nav .collapsing {
       > a:visited {
         font-size: 1.8em;
         font-variant: bold;
-        color: $nav-links;
+        color: $nav-links-inbody;
         transition: color 0.5s;
 
         @include fonts($navbar-font, $navbar-font-weight);
+
+        @include min(768) {
+          color: $nav-links;
+        }
       }
 
       > a:hover {
@@ -113,6 +117,7 @@ nav .collapsing {
 
   .navbar-toggle {
     border-color: $nav-toggle-border;
+    transition: all 0.5s;
 
     .icon-bar {
       background-color: $nav-toggle-inner-bars;
@@ -121,6 +126,11 @@ nav .collapsing {
     &:hover,
     &:focus {
       background-color: $nav-toggle-hover-bg;
+      border-color: $nav-toggle-hover-border;
+
+      .icon-bar {
+        background-color: $nav-toggle-hover-inner-bars;
+      }
     }
   }
 }

@@ -105,8 +105,10 @@ $open-filter-panel: $font-black;
 /* Borders */
 
 $active-border-bottom: $rgba-secondary-2-1;
-$nav-toggle-border: $font-white;
-$nav-toggle-inner-bars: $font-white;
+$nav-toggle-border: $font-black;
+$nav-toggle-inner-bars: $font-black;
+$nav-toggle-hover-border: $gypsum;
+$nav-toggle-hover-inner-bars: $nav-toggle-hover-border;
 $bio-border-color: $rgba-secondary-1-4;
 $project-border-color: $rgba-secondary-1-4;
 $form-valid-border: green;
@@ -121,7 +123,7 @@ $contact-bg: transparentize($gypsum, 0.6);
 /* Component Backgrounds */
 
 $full-nav-bg: $phantom-mist;
-$nav-toggle-hover-bg: lighten($transparent-black, 10%);
+$nav-toggle-hover-bg: $rgba-secondary-2-4;
 $collapsing-menu-bg: $transparent-black;
 $portfolio-item-bg: #fff;
 $form-label-bg: $rgba-secondary-2-4;
