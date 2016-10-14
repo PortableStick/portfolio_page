@@ -97,7 +97,7 @@ $(document).ready(() => {
 
     $("#email-form").on('submit', event => {
         event.preventDefault();
-        $.post('http://localhost:9000/sendmail',$(event.target).serialize())
+        $.post('https://api.gregoftheweb.com/sendmail',$(event.target).serialize())
             .done(result => {
                 toastr.success("Message sent!");
                 $('#email, #message, #name, #send-button').prop('disabled', true);
