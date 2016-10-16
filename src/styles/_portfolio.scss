@@ -99,9 +99,10 @@
     .grid-item {
       float: left;
       border-radius: 5px;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
       padding: 10px auto;
       overflow: hidden;
+      border: 1px solid $grid-item-border-color;
 
       $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
@@ -277,6 +278,7 @@
 
       @include min(890) {
         margin-bottom: 18px;
+        border: none;
       }
     }
   }
