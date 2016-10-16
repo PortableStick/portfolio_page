@@ -24,7 +24,7 @@
     {
       "title": "Quote Generator",
       "description": "Press the button to get a new quote selected randomly from a treasure chest of wisdom!",
-      "techs": ["RxJS", "jQuery", "Bootstrap", "Handlebars"],
+      "techs": ["jQuery", "Bootstrap", "Handlebars"],
       "url": "/quote-generator",
       "github": "https://github.com/PortableStick/quoteviewer"
       },
