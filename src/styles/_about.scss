@@ -1,14 +1,15 @@
 #about {
   height: auto;
   background-color: $about-bg;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
-  @include min(768) {
-    // background-image: url('../images/portpic.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  @include min(1130) {
+    flex-wrap: nowrap;
   }
 
-  @include min(890) {
+  @include min(1130) {
     height: 100vh;
 
     @include max-height(895) {
@@ -17,15 +18,26 @@
     }
   }
 
+  img {
+    margin: 50px auto;
+    box-shadow: 0 0 5px $self-pic-box-shadow;
+  }
+
   #bio {
     @include min(768) {
-      float: right;
       padding: 20px;
-      margin-top: 50px;
-      margin-right: 200px;
+    }
+
+    @include min(1130) {
+      // margin-top: 30px;
+      margin-right: auto;
       width: 500px;
       background-color: $bio-bg;
       border: 1px solid $bio-border-color;
+    }
+
+    @include min(1400) {
+      margin-right: 200px;
     }
 
     p {
@@ -36,7 +48,7 @@
 
       @include fonts($bio-font, $bio-font-wt);
 
-      @include min(768) {
+      @include min(1130) {
         color: $bio-font-color;
       }
 
