@@ -99,7 +99,7 @@
     .grid-item {
       float: left;
       border-radius: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       padding: 10px auto;
       overflow: hidden;
       border: 1px solid $grid-item-border-color;
@@ -107,7 +107,7 @@
       $list: game-of-life meteorite-strike-map freecodecamp-leaderboard markdown-previewer file-metadata-microservice image-search-abstraction-layer url-shortener request-header-parser wikipedia-viewer timestamp-microservice recipe-box force-directed-graph twitchtv-viewer forecast-app quote-generator histogram scatterplot heatmap;
 
       @each $id in $list {
-        @include make-background(#{$id}, "../images/#{$id}.png");
+        @include make-background(#{$id}, "../images/#{$id}.jpg");
       }
 
       &:hover {
