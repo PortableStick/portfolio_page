@@ -99,8 +99,15 @@ $(document).ready(() => {
   $("#email-form").validate({
     submitHandler: (form) => {
       event.preventDefault()
+      let formData = $(form).serializeArray().reduce((prev, curr) => {
+        let key = curr.name;
+        let value = curr.value;
+        let newObj = {};
+        newObj[key] = value;
+        return Object.assign({}, prev, newObj);
+      }, {})
       $('#email, #message, #name, #send-button').prop('disabled', true);
-      $.post('https://api.gregoftheweb.com/sendmail', $(form).serialize())
+      $.post('https://api.gregoftheweb.com/sendmail', formData)
         .done(result => {
           toastr.success("Message sent!");
         })
